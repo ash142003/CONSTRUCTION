@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Premium-grade steel, cement, and construction materials supplier in India">
+  <title>ASWIN142003 | Construction Materials Supplier</title>
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+  <link rel="preload" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css" as="style">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" as="style">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  
+  <!-- CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Custom properties */
+    :root {
+      --primary: #e11d48;
+      --primary-dark: #be123c;
+      --secondary: #1e3a8a;
+      --whatsapp: #25D366;
+    }
+    
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .fade-in {
+      opacity: 0;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    
+    .delay-100 { animation-delay: 100ms; }
+    .delay-200 { animation-delay: 200ms; }
+    .delay-300 { animation-delay: 300ms; }
+
+    /* Hero background animation */
+    @keyframes zoomInHero {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+    
+    .hero-bg {
+      animation: zoomInHero 15s ease-in-out infinite alternate;
+      background-attachment: fixed;
+    }
+    
+    /* Floating buttons */
+    .floating-btn {
+      position: fixed;
+      right: 20px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      z-index: 100;
+      transition: all 0.3s ease;
+    }
+    
+    .floating-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+    
+    .floating-whatsapp {
+      bottom: 140px;
+      background-color: var(--whatsapp);
+      animation: slideInRight 1s ease-out;
+    }
+    
+    .floating-chatbox {
+      bottom: 70px;
+      background-color: var(--secondary);
+      animation: slideInRight 1.2s ease-out;
+    }
+    
+    /* Scroll to top button */
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: white;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      display: none;
+      z-index: 99;
+      transition: all 0.3s ease;
+    }
+    
+    #scrollToTopBtn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+    
+    /* Card hover effect */
+    .material-card {
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    
+    .material-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    /* Form inputs */
+    .form-input {
+      transition: all 0.3s ease;
+      border: 1px solid #e5e7eb;
+    }
+    
+    .form-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.1);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero-bg {
+        background-attachment: scroll;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 bg-white shadow-md z-50">
+    <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <span class="text-red-600 text-2xl">🛠️</span>
+        <h1 class="text-2xl font-bold text-red-700 tracking-tight">ASWIN142003</h1>
+      </div>
+      
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+        <i class="ph ph-list text-2xl"></i>
+      </button>
+      
+      <!-- Desktop menu -->
+      <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <li><a href="#about" class="hover:text-red-700 transition duration-300">Products</a></li>
+        <li><a href="#testimonials" class="hover:text-red-700 transition duration-300">Testimonials</a></li>
+        <li><a href="#contact" class="hover:text-red-700 transition duration-300">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+      <a href="#about" class="block py-2 hover:text-red-700">Products</a>
+      <a href="#testimonials" class="block py-2 hover:text-red-700">Testimonials</a>
+      <a href="#contact" class="block py-2 hover:text-red-700">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center bg-cover bg-center bg-no-repeat text-white p-8 relative hero-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('construction-site.jpg');">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-black bg-opacity-60 p-8 rounded-lg animate__animated animate__fadeIn">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+          Building India's Future <span class="text-red-500">With Quality</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8">Premium-grade steel, cement & construction materials trusted by builders across India</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="#contact" class="bg-red-700 hover:bg-red-800 transition duration-300 px-8 py-3 text-white font-semibold rounded-full shadow-lg transform hover:scale-105">
+            Request a Quote
+          </a>
+          <a href="#about" class="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 transition duration-300 px-8 py-3 text-white font-semibold rounded-full shadow-lg transform hover:scale-105">
+            Our Products
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <a href="#about" class="text-white">
+        <i class="ph ph-arrow-down text-3xl"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="bg-red-700 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="fade-in">
+          <div class="text-4xl font-bold mb-2">15+</div>
+          <div class="text-lg">Years Experience</div>
+        </div>
+        <div class="fade-in delay-100">
+          <div class="text-4xl font-bold mb-2">500+</div>
+          <div class="text-lg">Projects Supported</div>
+        </div>
+        <div class="fade-in delay-200">
+          <div class="text-4xl font-bold mb-2">100%</div>
+          <div class="text-lg">Quality Guarantee</div>
+        </div>
+        <div class="fade-in delay-300">
+          <div class="text-4xl font-bold mb-2">24/7</div>
+          <div class="text-lg">Customer Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 bg-white">
+    <div class="container mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl font-bold mb-6 fade-in">Our Premium Construction Materials</h2>
+        <p class="text-gray-600 text-lg fade-in delay-100">
+          We provide only the highest quality materials that meet international standards, ensuring durability and safety for all your construction needs.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Structural Steel -->
+        <a href="steel.html" class="material-card group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 fade-in">
+          <div class="overflow-hidden rounded-lg mb-4">
+            <img src="Structural Steel.png" alt="Structural Steel" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="flex items-center mb-3">
+            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
+              <i class="ph ph-buildings text-red-700 text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-semibold">Structural Steel</h3>
+          </div>
+          <p class="text-gray-600">High-strength steel beams, TMT bars & custom-cut rebar for industrial and residential builds.</p>
+          <div class="mt-4 text-red-700 font-medium flex items-center group-hover:underline">
+            Learn more
+            <i class="ph ph-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+          </div>
+        </a>
+
+        <!-- Premium Cement -->
+        <a href="Premium Cement.html" class="material-card group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 fade-in delay-100">
+          <div class="overflow-hidden rounded-lg mb-4">
+            <img src="Premium Cement.png" alt="Premium Cement" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="flex items-center mb-3">
+            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
+              <i class="ph ph-factory text-red-700 text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-semibold">Premium Cement</h3>
+          </div>
+          <p class="text-gray-600">Portland and blended cements offering durability and flexibility for all construction needs.</p>
+          <div class="mt-4 text-red-700 font-medium flex items-center group-hover:underline">
+            Learn more
+            <i class="ph ph-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+          </div>
+        </a>
+
+        <!-- Concrete -->
+        <a href="Concrete.html" class="material-card group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 fade-in delay-200">
+          <div class="overflow-hidden rounded-lg mb-4">
+            <img src="Concrete.png" alt="Concrete" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="flex items-center mb-3">
+            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
+              <i class="ph ph-wall text-red-700 text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-semibold">Concrete</h3>
+          </div>
+          <p class="text-gray-600">A range of high-quality concrete mixes for residential to industrial projects.</p>
+          <div class="mt-4 text-red-700 font-medium flex items-center group-hover:underline">
+            Learn more
+            <i class="ph ph-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+          </div>
+        </a>
+
+        <!-- Bricks / Concrete Blocks -->
+        <a href="Bricks-Concrete-Blocks.html" class="material-card group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 fade-in">
+          <div class="overflow-hidden rounded-lg mb-4">
+            <img src="Bricks & Concrete Blocks.png" alt="Bricks and Concrete Blocks" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="flex items-center mb-3">
+            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
+              <i class="ph ph-cube text-red-700 text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-semibold">Bricks / Blocks</h3>
+          </div>
+          <p class="text-gray-600">High-quality clay bricks and concrete blocks for strong walls and insulation.</p>
+          <div class="mt-4 text-red-700 font-medium flex items-center group-hover:underline">
+            Learn more
+            <i class="ph ph-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+          </div>
+        </a>
+
+        <!-- Wood -->
+        <a href="wood.html" class="material-card group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 fade-in delay-100">
+          <div class="overflow-hidden rounded-lg mb-4">
+            <img src="wood.png" alt="Wood" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="flex items-center mb-3">
+            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
+              <i class="ph ph-tree text-red-700 text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-semibold">Wood</h3>
+          </div>
+          <p class="text-gray-600">Premium hardwood and plywood ideal for furniture, interiors, and décor.</p>
+          <div class="mt-4 text-red-700 font-medium flex items-center group-hover:underline">
+            Learn more
+            <i class="ph ph-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+          </div>
+        </a>
+
+        <!-- Sand & Aggregates -->
+        <a href="Sand and Aggregates.html" class="material-card group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 fade-in delay-200">
+          <div class="overflow-hidden rounded-lg mb-4">
+            <img src="Sand & Aggregates.png" alt="Sand and Aggregates" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="flex items-center mb-3">
+            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
+              <i class="ph ph-mountains text-red-700 text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-semibold">Sand & Aggregates</h3>
+          </div>
+          <p class="text-gray-600">River sand, gravel & crushed stone for concrete, roads, and masonry.</p>
+          <div class="mt-4 text-red-700 font-medium flex items-center group-hover:underline">
+            Learn more
+            <i class="ph ph-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+          </div>
+        </a>
+
+        <a href="Tiles.html" class="material-card group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 fade-in delay-200">
+            <div class="overflow-hidden rounded-lg mb-4">
+              <img src="tiles.png" alt="Tiles" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+            </div>
+            <div class="flex items-center mb-3">
+              <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                <i class="ph ph-grid-four text-red-700 text-xl"></i>
+              </div>
+              <h3 class="text-2xl font-semibold">Tiles</h3>
+            </div>
+            <p class="text-gray-600">Wide range of ceramic, porcelain & vitrified tiles for floors, walls, and decor use.</p>
+            <div class="mt-4 text-red-700 font-medium flex items-center group-hover:underline">
+              Learn more
+              <i class="ph ph-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            </div>
+          </a>
+          
+          <a href="Glass.html" class="material-card group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 fade-in delay-200">
+            <div class="overflow-hidden rounded-lg mb-4">
+              <img src="glass.png" alt="Glass" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+            </div>
+            <div class="flex items-center mb-3">
+              <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                <i class="ph ph-windows-logo text-red-700 text-xl"></i>
+              </div>
+              <h3 class="text-2xl font-semibold">Glass</h3>
+            </div>
+            <p class="text-gray-600">High-quality tempered, laminated, frosted & insulated glass for safety, privacy, and efficiency.</p>
+            <div class="mt-4 text-red-700 font-medium flex items-center group-hover:underline">
+              Learn more
+              <i class="ph ph-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            </div>
+          </a>
+
+          
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 px-6 bg-gray-50">
+    <div class="container mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl font-bold mb-6 fade-in">What Our Clients Say</h2>
+        <p class="text-gray-600 text-lg fade-in delay-100">
+          Trusted by builders, contractors, and developers across India for quality materials and reliable service.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-md fade-in">
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400 text-xl mr-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-6">
+            "ASWIN142003 has been our go-to supplier for all structural steel requirements. Their quality is consistently excellent and delivery is always on time."
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-gray-200 mr-4 overflow-hidden">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Kumar" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-bold">Rajesh Kumar</h4>
+              <p class="text-gray-500 text-sm">RK Constructions</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-md fade-in delay-100">
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400 text-xl mr-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-6">
+            "The premium cement from ASWIN142003 has significantly improved the quality of our projects. Their technical support is also very helpful."
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-gray-200 mr-4 overflow-hidden">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Sharma" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-bold">Priya Sharma</h4>
+              <p class="text-gray-500 text-sm">Sharma Builders</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-md fade-in delay-200">
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400 text-xl mr-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-6">
+            "We've been sourcing all our construction materials from ASWIN142003 for 5 years now. Their consistent quality and customer service keep us coming back."
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-gray-200 mr-4 overflow-hidden">
+              <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Vikram Patel" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-bold">Vikram Patel</h4>
+              <p class="text-gray-500 text-sm">Patel Infrastructure</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 bg-white">
+    <div class="container mx-auto">
+      <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
+        <div class="fade-in">
+          <h2 class="text-4xl font-bold mb-6">Get In Touch</h2>
+          <p class="text-gray-600 mb-8 text-lg">
+            Have questions about our products or need a quote for your project? Our team is ready to assist you with expert advice and competitive pricing.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="bg-red-100 p-3 rounded-full mr-4">
+                <i class="ph ph-phone text-red-700 text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg mb-1">Call Us</h4>
+                <a href="tel:+917598242759" class="text-gray-600 hover:text-red-700 transition">+91 7598242759</a>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-red-100 p-3 rounded-full mr-4">
+                <i class="ph ph-envelope text-red-700 text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg mb-1">Email Us</h4>
+                <a href="mailto:info@adsteels.com" class="text-gray-600 hover:text-red-700 transition">aswinsenthil14@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-red-100 p-3 rounded-full mr-4">
+                <i class="ph ph-map-pin text-red-700 text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg mb-1">Visit Us</h4>
+                <p class="text-gray-600">23 kavara street korand Mayiladuthurai</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-8">
+            <h4 class="font-bold text-lg mb-4">Connect With Us</h4>
+            <div class="flex space-x-4">
+              <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-red-700 hover:text-white transition">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-red-700 hover:text-white transition">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-red-700 hover:text-white transition">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-red-700 hover:text-white transition">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="fade-in delay-100">
+          <form class="bg-gray-50 p-8 rounded-xl shadow-md">
+            <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+            
+            <div class="grid gap-6">
+              <div>
+                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                <input type="text" id="name" placeholder="Enter your name" class="w-full p-4 border form-input rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+              </div>
+              
+              <div>
+                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" class="w-full p-4 border form-input rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+              </div>
+              
+              <div>
+                <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" class="w-full p-4 border form-input rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+              </div>
+              
+              <div>
+                <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                <textarea id="message" rows="4" placeholder="Tell us about your project requirements" class="w-full p-4 border form-input rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+              </div>
+              
+              <button type="submit" class="bg-red-700 hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <div class="h-96 w-full bg-gray-200 overflow-hidden">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.715424759073!2d72.8326603153784!3d19.04198825796716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8a6b819d6a5%3A0x1b9a3a7c8f8b8b8b!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">ASWIN142003</h3>
+          <p class="text-gray-400">
+            Providing high-quality construction materials to build India's future since 2008.
+          </p>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#about" class="text-gray-400 hover:text-white transition">Products</a></li>
+            <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Products</h4>
+          <ul class="space-y-2">
+            <li><a href="steel.html" class="text-gray-400 hover:text-white transition">Structural Steel</a></li>
+            <li><a href="Premium Cement.html" class="text-gray-400 hover:text-white transition">Premium Cement</a></li>
+            <li><a href="concrete.html" class="text-gray-400 hover:text-white transition">Concrete</a></li>
+            <li><a href="Bricks-Concrete-Blocks.html" class="text-gray-400 hover:text-white transition">Bricks & Blocks</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+          <p class="text-gray-400 mb-4">Subscribe to get updates on new products and offers.</p>
+          <form class="flex">
+            <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full">
+            <button type="submit" class="bg-red-700 hover:bg-red-800 px-4 py-2 rounded-r-lg transition">
+              <i class="ph ph-paper-plane-tilt"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm">© 2025 ASWIN142003. All rights reserved.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+          <a href="#" class="text-gray-400 hover:text-white transition">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" title="Go to top" aria-label="Scroll to top">
+    <i class="ph ph-arrow-up"></i>
+  </button>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/917598242759" class="floating-btn floating-whatsapp" title="Chat with us on WhatsApp" target="_blank" aria-label="WhatsApp Chat">
+    <i class="fab fa-whatsapp text-xl"></i>
+  </a>
+
+  <!-- Floating AI Chat -->
+  <a href="ai.html" class="floating-btn floating-chatbox" title="Chat with our assistant" target="_blank" aria-label="Chatbot">
+    <i class="ph ph-robot text-xl"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Scroll to top button
+    const scrollBtn = document.getElementById('scrollToTopBtn');
+    window.onscroll = () => {
+      scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    };
+    
+    scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // Animate elements when they come into view
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll('.fade-in');
+      
+      elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementPosition < windowHeight - 100) {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }
+      });
+    };
+    
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+  </script>
+</body>
+</html>
