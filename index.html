@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Premium-grade steel, cement, and construction materials supplier in India">
   <title>ASWIN142003 | Construction Materials Supplier</title>
+  
   <!-- Preload critical resources -->
   <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
   <link rel="preload" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css" as="style">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" as="style">
   
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- SECTION: Corrected Favicon Links -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
   
   <!-- CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -83,13 +86,13 @@
     }
     
     .floating-whatsapp {
-      bottom: 140px;
+      bottom: 150px; /* Adjusted position */
       background-color: var(--whatsapp);
       animation: slideInRight 1s ease-out;
     }
     
     .floating-chatbox {
-      bottom: 70px;
+      bottom: 80px; /* Adjusted position */
       background-color: var(--secondary);
       animation: slideInRight 1.2s ease-out;
     }
@@ -106,7 +109,9 @@
       border-radius: 50%;
       border: none;
       cursor: pointer;
-      display: none;
+      display: none; /* Changed to none, will be changed by JS */
+      align-items: center;
+      justify-content: center;
       z-index: 99;
       transition: all 0.3s ease;
     }
@@ -147,32 +152,39 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
 
-  <!-- Navbar -->
+  <!-- SECTION: Corrected Universal Header -->
   <header class="sticky top-0 bg-white shadow-md z-50">
     <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="flex items-center space-x-2">
+      <!-- Logo and Brand Name -->
+      <a href="index.html" class="flex items-center space-x-2">
         <span class="text-red-600 text-2xl">🛠️</span>
         <h1 class="text-2xl font-bold text-red-700 tracking-tight">ASWIN142003</h1>
-      </div>
+      </a>
       
-      <!-- Mobile menu button -->
+      <!-- Mobile Menu Button (Hamburger) -->
       <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
-        <i class="ph ph-list text-2xl"></i>
+        <i class="ph ph-list text-3xl"></i>
       </button>
       
-      <!-- Desktop menu -->
-      <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 text-gray-700 font-medium items-center">
         <li><a href="#about" class="hover:text-red-700 transition duration-300">Products</a></li>
         <li><a href="#testimonials" class="hover:text-red-700 transition duration-300">Testimonials</a></li>
         <li><a href="#contact" class="hover:text-red-700 transition duration-300">Contact</a></li>
+        <li>
+          <a href="ai.html" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm font-semibold">
+            AI Estimator
+          </a>
+        </li>
       </ul>
     </nav>
     
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 border-t border-gray-200">
       <a href="#about" class="block py-2 hover:text-red-700">Products</a>
       <a href="#testimonials" class="block py-2 hover:text-red-700">Testimonials</a>
       <a href="#contact" class="block py-2 hover:text-red-700">Contact</a>
+      <a href="ai.html" target="_blank" class="block py-2 font-semibold text-blue-600">AI Material Estimator</a>
     </div>
   </header>
 
@@ -346,7 +358,8 @@
           </div>
         </a>
 
-        <a href="Tiles.html" class="material-card group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 fade-in delay-200">
+        <!-- Tiles -->
+        <a href="Tiles.html" class="material-card group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 fade-in delay-100">
             <div class="overflow-hidden rounded-lg mb-4">
               <img src="tiles.png" alt="Tiles" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
             </div>
@@ -361,26 +374,25 @@
               Learn more
               <i class="ph ph-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
             </div>
-          </a>
+        </a>
           
-          <a href="Glass.html" class="material-card group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 fade-in delay-200">
-            <div class="overflow-hidden rounded-lg mb-4">
-              <img src="glass.png" alt="Glass" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+        <!-- Glass -->
+        <a href="Glass.html" class="material-card group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 fade-in delay-200">
+          <div class="overflow-hidden rounded-lg mb-4">
+            <img src="glass.png" alt="Glass" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="flex items-center mb-3">
+            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
+              <i class="ph ph-windows-logo text-red-700 text-xl"></i>
             </div>
-            <div class="flex items-center mb-3">
-              <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
-                <i class="ph ph-windows-logo text-red-700 text-xl"></i>
-              </div>
-              <h3 class="text-2xl font-semibold">Glass</h3>
-            </div>
-            <p class="text-gray-600">High-quality tempered, laminated, frosted & insulated glass for safety, privacy, and efficiency.</p>
-            <div class="mt-4 text-red-700 font-medium flex items-center group-hover:underline">
-              Learn more
-              <i class="ph ph-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
-            </div>
-          </a>
-
-          
+            <h3 class="text-2xl font-semibold">Glass</h3>
+          </div>
+          <p class="text-gray-600">High-quality tempered, laminated, frosted & insulated glass for safety, privacy, and efficiency.</p>
+          <div class="mt-4 text-red-700 font-medium flex items-center group-hover:underline">
+            Learn more
+            <i class="ph ph-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -399,11 +411,7 @@
         <div class="bg-white p-8 rounded-xl shadow-md fade-in">
           <div class="flex items-center mb-4">
             <div class="text-yellow-400 text-xl mr-2">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
           </div>
           <p class="text-gray-600 mb-6">
@@ -423,11 +431,7 @@
         <div class="bg-white p-8 rounded-xl shadow-md fade-in delay-100">
           <div class="flex items-center mb-4">
             <div class="text-yellow-400 text-xl mr-2">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
           </div>
           <p class="text-gray-600 mb-6">
@@ -447,11 +451,7 @@
         <div class="bg-white p-8 rounded-xl shadow-md fade-in delay-200">
           <div class="flex items-center mb-4">
             <div class="text-yellow-400 text-xl mr-2">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
             </div>
           </div>
           <p class="text-gray-600 mb-6">
@@ -483,29 +483,21 @@
           
           <div class="space-y-6">
             <div class="flex items-start">
-              <div class="bg-red-100 p-3 rounded-full mr-4">
-                <i class="ph ph-phone text-red-700 text-xl"></i>
-              </div>
+              <div class="bg-red-100 p-3 rounded-full mr-4"><i class="ph ph-phone text-red-700 text-xl"></i></div>
               <div>
                 <h4 class="font-bold text-lg mb-1">Call Us</h4>
                 <a href="tel:+917598242759" class="text-gray-600 hover:text-red-700 transition">+91 7598242759</a>
               </div>
             </div>
-            
             <div class="flex items-start">
-              <div class="bg-red-100 p-3 rounded-full mr-4">
-                <i class="ph ph-envelope text-red-700 text-xl"></i>
-              </div>
+              <div class="bg-red-100 p-3 rounded-full mr-4"><i class="ph ph-envelope text-red-700 text-xl"></i></div>
               <div>
                 <h4 class="font-bold text-lg mb-1">Email Us</h4>
-                <a href="mailto:info@adsteels.com" class="text-gray-600 hover:text-red-700 transition">aswinsenthil14@gmail.com</a>
+                <a href="mailto:aswinsenthil14@gmail.com" class="text-gray-600 hover:text-red-700 transition">aswinsenthil14@gmail.com</a>
               </div>
             </div>
-            
             <div class="flex items-start">
-              <div class="bg-red-100 p-3 rounded-full mr-4">
-                <i class="ph ph-map-pin text-red-700 text-xl"></i>
-              </div>
+              <div class="bg-red-100 p-3 rounded-full mr-4"><i class="ph ph-map-pin text-red-700 text-xl"></i></div>
               <div>
                 <h4 class="font-bold text-lg mb-1">Visit Us</h4>
                 <p class="text-gray-600">23 kavara street korand Mayiladuthurai</p>
@@ -516,18 +508,10 @@
           <div class="mt-8">
             <h4 class="font-bold text-lg mb-4">Connect With Us</h4>
             <div class="flex space-x-4">
-              <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-red-700 hover:text-white transition">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-red-700 hover:text-white transition">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-red-700 hover:text-white transition">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-red-700 hover:text-white transition">
-                <i class="fab fa-instagram"></i>
-              </a>
+              <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-red-700 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-red-700 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-red-700 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-red-700 hover:text-white transition"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
         </div>
@@ -535,28 +519,23 @@
         <div class="fade-in delay-100">
           <form class="bg-gray-50 p-8 rounded-xl shadow-md">
             <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
-            
             <div class="grid gap-6">
               <div>
                 <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
                 <input type="text" id="name" placeholder="Enter your name" class="w-full p-4 border form-input rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
               </div>
-              
               <div>
                 <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
                 <input type="email" id="email" placeholder="Enter your email" class="w-full p-4 border form-input rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
               </div>
-              
               <div>
                 <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
                 <input type="tel" id="phone" placeholder="Enter your phone number" class="w-full p-4 border form-input rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
               </div>
-              
               <div>
                 <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
                 <textarea id="message" rows="4" placeholder="Tell us about your project requirements" class="w-full p-4 border form-input rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
               </div>
-              
               <button type="submit" class="bg-red-700 hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
                 Send Message
               </button>
@@ -567,9 +546,9 @@
     </div>
   </section>
 
-  <!-- Map Section -->
+  <!-- Map Section (Tip: Go to Google Maps, find your address, click Share -> Embed a map, and paste the new iframe src here) -->
   <div class="h-96 w-full bg-gray-200 overflow-hidden">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.715424759073!2d72.8326603153784!3d19.04198825796716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8a6b819d6a5%3A0x1b9a3a7c8f8b8b8b!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.692631742464!2d79.65088897503615!3d11.09677848906969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a552636234a9267%3A0x86792612a4aab711!2sKoranaattu%20Karuppur!5e0!3m2!1sen!2sin!4v1672832819873!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 
   <!-- Footer -->
@@ -582,7 +561,6 @@
             Providing high-quality construction materials to build India's future since 2008.
           </p>
         </div>
-        
         <div>
           <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
           <ul class="space-y-2">
@@ -592,7 +570,6 @@
             <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
           </ul>
         </div>
-        
         <div>
           <h4 class="text-lg font-semibold mb-4">Products</h4>
           <ul class="space-y-2">
@@ -602,7 +579,6 @@
             <li><a href="Bricks-Concrete-Blocks.html" class="text-gray-400 hover:text-white transition">Bricks & Blocks</a></li>
           </ul>
         </div>
-        
         <div>
           <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
           <p class="text-gray-400 mb-4">Subscribe to get updates on new products and offers.</p>
@@ -616,7 +592,7 @@
       </div>
       
       <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-        <p class="text-gray-400 text-sm">© 2025 ASWIN142003. All rights reserved.</p>
+        <p class="text-gray-400 text-sm">© 2024 ASWIN142003. All rights reserved.</p>
         <div class="flex space-x-6 mt-4 md:mt-0">
           <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
           <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
@@ -628,45 +604,53 @@
 
   <!-- Scroll to Top Button -->
   <button id="scrollToTopBtn" title="Go to top" aria-label="Scroll to top">
-    <i class="ph ph-arrow-up"></i>
+    <i class="ph ph-arrow-up text-2xl"></i>
   </button>
 
   <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/917598242759" class="floating-btn floating-whatsapp" title="Chat with us on WhatsApp" target="_blank" aria-label="WhatsApp Chat">
-    <i class="fab fa-whatsapp text-xl"></i>
+    <i class="fab fa-whatsapp text-2xl"></i>
   </a>
 
   <!-- Floating AI Chat -->
   <a href="ai.html" class="floating-btn floating-chatbox" title="Chat with our assistant" target="_blank" aria-label="Chatbot">
-    <i class="ph ph-robot text-xl"></i>
+    <i class="ph ph-robot text-2xl"></i>
   </a>
 
-  <!-- Scripts -->
+  <!-- SECTION: Corrected and Combined Universal Scripts -->
   <script>
-    // Mobile menu toggle
+    // Universal Mobile menu toggle
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+    if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
     
-    // Scroll to top button
+    // Universal Scroll to top button
     const scrollBtn = document.getElementById('scrollToTopBtn');
-    window.onscroll = () => {
-      scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
-    };
-    
-    scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-    
-    // Animate elements when they come into view
+    if(scrollBtn) {
+      window.onscroll = () => {
+        // We also run the animation scroll check here for efficiency
+        animateOnScroll(); 
+        
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+          scrollBtn.style.display = 'flex';
+        } else {
+          scrollBtn.style.display = 'none';
+        }
+      };
+      scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Universal Animate on scroll
+    const fadeInElements = document.querySelectorAll('.fade-in');
     const animateOnScroll = () => {
-      const elements = document.querySelectorAll('.fade-in');
-      
-      elements.forEach(element => {
+      fadeInElements.forEach(element => {
         const elementPosition = element.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-        
         if (elementPosition < windowHeight - 100) {
           element.style.opacity = '1';
           element.style.transform = 'translateY(0)';
@@ -674,8 +658,9 @@
       });
     };
     
-    window.addEventListener('scroll', animateOnScroll);
+    // Initial check on load
     window.addEventListener('load', animateOnScroll);
   </script>
+
 </body>
 </html>

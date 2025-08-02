@@ -3,157 +3,238 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Construction Materials Calculator</title>
+  <title>AI Material Estimator | ASWIN142003</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  
   <style>
+    /* Custom properties from main site */
+    :root {
+      --primary: #e11d48; /* Red */
+      --secondary: #1e3a8a; /* Blue */
+    }
     .chat-container {
       height: 500px;
       overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #d1d5db #f3f4f6;
     }
     .user-msg {
-      background-color: #3b82f6;
+      background-color: var(--secondary);
       color: white;
       border-radius: 1rem 1rem 0 1rem;
     }
     .bot-msg {
-      background-color: #e5e7eb;
+      background-color: #f3f4f6;
       border-radius: 1rem 1rem 1rem 0;
     }
-    .typing {
+    .typing-dot {
       display: inline-block;
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      background-color: #6b7280;
-      animation: typing 1.5s infinite ease-in-out;
+      background-color: #9ca3af;
+      animation: typing 1.4s infinite ease-in-out;
     }
+    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
     @keyframes typing {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
+      0%, 80%, 100% { transform: scale(0); }
+      40% { transform: scale(1.0); }
     }
   </style>
 </head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
-  <div class="bg-white rounded-xl shadow-xl w-full max-w-md">
-    <div class="bg-blue-600 text-white p-4 rounded-t-xl">
-      <h1 class="text-xl font-bold">🏗️ASWIN142003 Construction Materials Analyzer</h1>
+<body class="bg-gray-200 min-h-screen flex items-center justify-center p-4 font-sans">
+  <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md flex flex-col">
+    <!-- Header -->
+    <div class="bg-gray-800 text-white p-4 rounded-t-2xl flex justify-between items-center">
+      <div>
+        <h1 class="text-xl font-bold">AI Material Estimator</h1>
+        <p class="text-xs text-gray-300">By ASWIN142003</p>
+      </div>
+      <a href="index.html" title="Back to Main Site" class="text-gray-300 hover:text-white transition">
+        <i class="ph ph-house text-2xl"></i>
+      </a>
     </div>
     
-    <div id="chat" class="chat-container p-4 space-y-3"></div>
+    <!-- Chat Area -->
+    <div id="chat" class="chat-container p-4 space-y-4 flex-1"></div>
     
-    <div class="p-4 border-t">
-      <div id="input-area" class="flex space-x-2">
+    <!-- Input Area -->
+    <div class="p-4 border-t border-gray-200">
+      <div id="options" class="mb-2 hidden grid grid-cols-2 sm:grid-cols-3 gap-2"></div>
+      <div id="input-area" class="flex space-x-3 items-center">
         <input id="user-input" type="text" placeholder="Type your answer..." 
-               class="flex-1 border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-        <button id="send-btn" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
-          Send
+               class="flex-1 border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+        <button id="send-btn" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition flex items-center justify-center">
+          <i class="ph ph-paper-plane-tilt text-xl"></i>
         </button>
       </div>
-      <div id="options" class="mt-2 hidden grid grid-cols-2 gap-2"></div>
     </div>
   </div>
 
   <script>
-    // Material calculation formulas (simplified estimates)
+    // --- Configuration & Data ---
     const materialCalculator = {
-      residential: {
-        cement: (sqft) => Math.round(sqft * 0.4), // 0.4 bags per sqft
-        concrete: (sqft) => Math.round(sqft * 0.1), // 0.1 cubic yards per sqft
-        steel: (sqft) => Math.round(sqft * 4), // 4 kg per sqft
-        bricks: (sqft) => Math.round(sqft * 8), // 8 bricks per sqft
-        wood: (sqft) => Math.round(sqft * 0.05), // 0.05 cubic meters per sqft
-        sand: (sqft) => Math.round(sqft * 0.05), // 0.05 cubic meters per sqft
-        glass: (sqft) => Math.round(sqft * 0.1), // 0.1 sqft glass per sqft
-        tiles: (sqft) => Math.round(sqft * 1.1) // 10% extra for cuts
-      },
-      commercial: {
-        cement: (sqft) => Math.round(sqft * 0.5),
-        concrete: (sqft) => Math.round(sqft * 0.15),
-        steel: (sqft) => Math.round(sqft * 6),
-        bricks: (sqft) => Math.round(sqft * 6),
-        wood: (sqft) => Math.round(sqft * 0.03),
-        sand: (sqft) => Math.round(sqft * 0.06),
-        glass: (sqft) => Math.round(sqft * 0.2),
-        tiles: (sqft) => Math.round(sqft * 1.1)
-      },
-      industrial: {
-        cement: (sqft) => Math.round(sqft * 0.6),
-        concrete: (sqft) => Math.round(sqft * 0.2),
-        steel: (sqft) => Math.round(sqft * 8),
-        bricks: (sqft) => Math.round(sqft * 4),
-        wood: (sqft) => Math.round(sqft * 0.02),
-        sand: (sqft) => Math.round(sqft * 0.07),
-        glass: (sqft) => Math.round(sqft * 0.15),
-        tiles: (sqft) => Math.round(sqft * 1.05)
-      }
+      residential: { cement: 0.4, concrete: 0.1, steel: 4, bricks: 8, wood: 0.05, sand: 0.05, glass: 0.1, tiles: 1.1 },
+      commercial: { cement: 0.5, concrete: 0.15, steel: 6, bricks: 6, wood: 0.03, sand: 0.06, glass: 0.2, tiles: 1.1 },
+      industrial: { cement: 0.6, concrete: 0.2, steel: 8, bricks: 4, wood: 0.02, sand: 0.07, glass: 0.15, tiles: 1.05 }
     };
 
-    // Chatbot logic
     const chat = document.getElementById('chat');
     const userInput = document.getElementById('user-input');
     const sendBtn = document.getElementById('send-btn');
     const optionsDiv = document.getElementById('options');
     const inputArea = document.getElementById('input-area');
 
-    let currentStep = 0;
-    let constructionType = '';
-    let squareFeet = 0;
-    let budget = 0;
+    let state = {
+      currentStep: 0,
+      constructionType: '',
+      squareFeet: 0,
+      budget: 0,
+    };
 
     const steps = [
       {
-        question: "What is the square footage of your construction project?",
-        handler: (answer) => {
-          squareFeet = parseInt(answer);
-          if (isNaN(squareFeet)) {
-            addBotMessage("Please enter a valid number for square footage.");
-            return false;
-          }
-          return true;
-        }
+        question: "Hello! I'm here to help you estimate the materials for your project. Let's start with the total area.",
+        handler: () => {}
       },
       {
-        question: "What type of construction is this?",
+        question: "What is the square footage (sqft) of your construction project?",
+        key: 'squareFeet',
+        validation: (val) => !isNaN(val) && val > 0,
+        errorMessage: "Please enter a valid, positive number for the area."
+      },
+      {
+        question: "Great. Now, what type of construction is this?",
+        key: 'constructionType',
         options: ["Residential", "Commercial", "Industrial"],
-        handler: (answer) => {
-          constructionType = answer.toLowerCase();
-          return true;
-        }
       },
       {
-        question: "What is your approximate budget (in ₹)?",
-        handler: (answer) => {
-          budget = parseInt(answer);
-          if (isNaN(budget)) {
-            addBotMessage("Please enter a valid budget amount.");
-            return false;
-          }
-          return true;
-        }
+        question: "Got it. Finally, what is your approximate budget (in ₹)?",
+        key: 'budget',
+        validation: (val) => !isNaN(val) && val >= 0,
+        errorMessage: "Please enter a valid budget amount."
       },
       {
-        question: "Calculating material estimates...",
-        handler: () => {
-          setTimeout(showResults, 1500);
-          return false; // Don't proceed to next step
-        }
+        question: "Perfect! Calculating the material estimates for you now...",
+        isAction: true,
+        action: () => setTimeout(showResults, 1500)
       }
     ];
 
-    // Start the conversation
-    addBotMessage("Hello! I'll help you estimate construction materials. Let's begin.");
-    askQuestion();
+    // --- Core Functions ---
+    function startConversation() {
+      state = { currentStep: 0, constructionType: '', squareFeet: 0, budget: 0 };
+      chat.innerHTML = '';
+      hideOptions();
+      addBotMessage(steps[0].question, false);
+      setTimeout(nextStep, 1000);
+    }
 
-    function askQuestion() {
-      const step = steps[currentStep];
+    function nextStep() {
+      state.currentStep++;
+      if (state.currentStep >= steps.length) return;
+
+      const step = steps[state.currentStep];
       addBotMessage(step.question);
-      
-      if (step.options) {
+
+      if (step.isAction) {
+        step.action();
+      } else if (step.options) {
         showOptions(step.options);
       } else {
-        inputArea.classList.remove('hidden');
+        hideOptions();
         userInput.focus();
       }
+    }
+
+    function handleResponse(answer) {
+      if (!answer.trim()) return;
+      addUserMessage(answer);
+      userInput.value = '';
+
+      const step = steps[state.currentStep];
+      const parsedAnswer = step.options ? answer.toLowerCase() : parseInt(answer.replace(/,/g, ''));
+      
+      if (step.validation && !step.validation(parsedAnswer)) {
+        addBotMessage(step.errorMessage);
+        return;
+      }
+      
+      state[step.key] = parsedAnswer;
+      hideOptions();
+      setTimeout(nextStep, 800);
+    }
+    
+    function showResults() {
+      const materials = materialCalculator[state.constructionType];
+      if (!materials) {
+          addBotMessage("Sorry, something went wrong with the calculation. Please try again.");
+          return;
+      }
+
+      const results = `
+        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+          <h3 class="font-bold text-lg mb-3 text-gray-800">📝 Material Estimates</h3>
+          <p class="text-sm text-gray-600 mb-3 pb-3 border-b">For a <strong>${state.squareFeet.toLocaleString()} sqft</strong> ${state.constructionType} project:</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li><span class="font-semibold w-24 inline-block">Cement:</span> ${Math.round(materials.cement * state.squareFeet).toLocaleString()} bags</li>
+            <li><span class="font-semibold w-24 inline-block">Concrete:</span> ${Math.round(materials.concrete * state.squareFeet).toLocaleString()} cu. yards</li>
+            <li><span class="font-semibold w-24 inline-block">Steel:</span> ${Math.round(materials.steel * state.squareFeet).toLocaleString()} kg</li>
+            <li><span class="font-semibold w-24 inline-block">Bricks:</span> ${Math.round(materials.bricks * state.squareFeet).toLocaleString()} units</li>
+            <li><span class="font-semibold w-24 inline-block">Sand:</span> ${Math.round(materials.sand * state.squareFeet).toLocaleString()} cu. meters</li>
+            <li><span class="font-semibold w-24 inline-block">Tiles:</span> ${Math.round(materials.tiles * state.squareFeet).toLocaleString()} sqft</li>
+          </ul>
+          <div class="mt-4 p-3 bg-blue-50 rounded-lg text-blue-800">
+            <p class="font-bold">💰 Budget Note:</p>
+            <p class="text-sm">Your budget of ₹${state.budget.toLocaleString()} averages to <strong>₹${Math.round(state.budget / state.squareFeet).toLocaleString()} per sqft</strong>.</p>
+          </div>
+        </div>
+      `;
+      addBotMessage(results, false);
+      addBotMessage("Would you like to start a new calculation?", false);
+      showOptions(["New Calculation"]);
+    }
+
+    // --- UI & Helper Functions ---
+    function addUserMessage(text) {
+      const msgDiv = document.createElement('div');
+      msgDiv.className = 'user-msg py-2 px-4 self-end max-w-xs sm:max-w-sm ml-auto break-words';
+      msgDiv.textContent = text;
+      chat.appendChild(msgDiv);
+      scrollToBottom();
+    }
+
+    function addBotMessage(content, showTyping = true) {
+      if (showTyping) {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'bot-msg py-3 px-4 self-start flex items-center space-x-1';
+        typingDiv.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+        chat.appendChild(typingDiv);
+        scrollToBottom();
+        
+        setTimeout(() => {
+          chat.removeChild(typingDiv);
+          createBotMessage(content);
+        }, 1200);
+      } else {
+        createBotMessage(content);
+      }
+    }
+    
+    function createBotMessage(content) {
+        const msgDiv = document.createElement('div');
+        msgDiv.className = 'bot-msg py-2 px-4 self-start max-w-xs sm:max-w-sm mr-auto break-words';
+        msgDiv.innerHTML = content;
+        chat.appendChild(msgDiv);
+        scrollToBottom();
     }
 
     function showOptions(options) {
@@ -164,115 +245,35 @@
       options.forEach(option => {
         const btn = document.createElement('button');
         btn.textContent = option;
-        btn.className = 'bg-blue-100 text-blue-800 p-2 rounded-lg hover:bg-blue-200 transition';
-        btn.addEventListener('click', () => handleResponse(option));
+        btn.className = 'bg-gray-200 text-gray-800 p-2 text-sm rounded-lg hover:bg-gray-300 transition focus:outline-none focus:ring-2 focus:ring-blue-400';
+        btn.onclick = () => {
+          if (option === "New Calculation") {
+            startConversation();
+          } else {
+            handleResponse(option);
+          }
+        };
         optionsDiv.appendChild(btn);
       });
     }
 
-    function handleResponse(answer) {
-      addUserMessage(answer);
-      
-      const step = steps[currentStep];
-      if (step.handler(answer)) {
-        currentStep++;
-        if (currentStep < steps.length) {
-          setTimeout(askQuestion, 800);
-        }
-      }
+    function hideOptions() {
+      optionsDiv.classList.add('hidden');
+      inputArea.classList.remove('hidden');
     }
 
-    function showResults() {
-      const materials = materialCalculator[constructionType];
-      const results = `
-        <div class="bg-white p-4 rounded-lg shadow-inner">
-          <h3 class="font-bold text-lg mb-2">📝 Material Estimates for ${squareFeet} sqft ${constructionType} project:</h3>
-          <ul class="space-y-1">
-            <li>🏗️ Cement: ${materials.cement(squareFeet)} bags</li>
-            <li>🧱 Concrete: ${materials.concrete(squareFeet)} cubic yards</li>
-            <li>🔩 Steel: ${materials.steel(squareFeet)} kg</li>
-            <li>🧱 Bricks: ${materials.bricks(squareFeet)} units</li>
-            <li>🪵 Wood: ${materials.wood(squareFeet)} cubic meters</li>
-            <li>🏝️ Sand: ${materials.sand(squareFeet)} cubic meters</li>
-            <li>🪟 Glass: ${materials.glass(squareFeet)} sqft</li>
-            <li>🧿 Tiles: ${materials.tiles(squareFeet)} sqft (including 5-10% waste)</li>
-          </ul>
-          <div class="mt-4 p-2 bg-blue-50 rounded-lg">
-            <p class="font-semibold">💰 Budget Note:</p>
-            <p>Your budget of ₹${budget.toLocaleString()} averages ₹${Math.round(budget/squareFeet)} per sqft.</p>
-          </div>
-        </div>
-      `;
-      
-      addBotMessage(results, false);
-      addBotMessage("Would you like to calculate for another project?", false);
-      
-      // Reset for new calculation
-      const restartBtn = document.createElement('button');
-      restartBtn.textContent = "Start New Calculation";
-      restartBtn.className = 'mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition';
-      restartBtn.addEventListener('click', () => {
-        currentStep = 0;
-        constructionType = '';
-        squareFeet = 0;
-        budget = 0;
-        chat.innerHTML = '';
-        addBotMessage("Let's calculate materials for another project!");
-        askQuestion();
-        optionsDiv.classList.add('hidden');
-        inputArea.classList.remove('hidden');
-      });
-      
-      chat.appendChild(restartBtn);
-    }
-
-    function addUserMessage(text) {
-      const msg = document.createElement('div');
-      msg.className = 'user-msg py-2 px-4 self-end max-w-xs ml-auto';
-      msg.textContent = text;
-      chat.appendChild(msg);
+    function scrollToBottom() {
       chat.scrollTop = chat.scrollHeight;
     }
 
-    function addBotMessage(text, showTyping = true) {
-      if (showTyping) {
-        const typing = document.createElement('div');
-        typing.className = 'bot-msg py-2 px-4 self-start max-w-xs mr-auto flex space-x-1';
-        typing.innerHTML = '<div class="typing"></div><div class="typing"></div><div class="typing"></div>';
-        chat.appendChild(typing);
-        chat.scrollTop = chat.scrollHeight;
-        
-        setTimeout(() => {
-          chat.removeChild(typing);
-          const msg = document.createElement('div');
-          msg.className = 'bot-msg py-2 px-4 self-start max-w-xs mr-auto';
-          msg.innerHTML = text;
-          chat.appendChild(msg);
-          chat.scrollTop = chat.scrollHeight;
-        }, 1000);
-      } else {
-        const msg = document.createElement('div');
-        msg.className = 'bot-msg py-2 px-4 self-start max-w-xs mr-auto';
-        msg.innerHTML = text;
-        chat.appendChild(msg);
-        chat.scrollTop = chat.scrollHeight;
-      }
-    }
-
-    // Event listeners
-    sendBtn.addEventListener('click', () => {
-      if (userInput.value.trim()) {
-        handleResponse(userInput.value.trim());
-        userInput.value = '';
-      }
-    });
-
+    // --- Event Listeners ---
+    sendBtn.addEventListener('click', () => handleResponse(userInput.value));
     userInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter' && userInput.value.trim()) {
-        handleResponse(userInput.value.trim());
-        userInput.value = '';
-      }
+      if (e.key === 'Enter') handleResponse(userInput.value);
     });
+
+    // --- Initialisation ---
+    startConversation();
   </script>
 </body>
 </html>

@@ -3,110 +3,140 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore AD Concrete’s premium concrete varieties, pricing per cubic meter, and recommended use cases. Perfect for builders, architects, and contractors." />
-  <title>Concrete Varieties & Prices | AD Concrete</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Explore ASWIN142003's premium concrete varieties, with pricing and recommended use cases for builders, architects, and contractors." />
+  <title>Concrete Varieties & Prices | ASWIN142003</title>
+  
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+  
+  <!-- Icons and Favicon -->
+  <link href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
 
-  <!-- Navbar -->
-  <header class="sticky top-0 bg-white shadow z-50">
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="index.html">
-            <h1 class="text-2xl font-bold text-red-700 cursor-pointer">🛠️ASWIN142003</h1>
-          </a>
-      <ul class="flex space-x-6 text-gray-700 font-medium">
-        <li><a href="#concrete-varieties" class="hover:text-red-700 transition">Products</a></li>
-        <li><a href="#recommendations" class="hover:text-red-700 transition">Recommendations</a></li>
-        <li><a href="#about" class="hover:text-red-700 transition">About</a></li>
-        <li><a href="#contact" class="hover:text-red-700 transition">Contact</a></li>
+  <!-- START: Universal Responsive Header -->
+  <header class="sticky top-0 bg-white shadow-md z-50">
+    <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2">
+        <span class="text-red-600 text-2xl">🛠️</span>
+        <h1 class="text-2xl font-bold text-red-700 tracking-tight">ASWIN142003</h1>
+      </a>
+      <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+        <i class="ph ph-list text-3xl"></i>
+      </button>
+      <ul class="hidden md:flex space-x-8 text-gray-700 font-medium items-center">
+        <li><a href="index.html#about" class="hover:text-red-700 transition duration-300">Products</a></li>
+        <li><a href="index.html#testimonials" class="hover:text-red-700 transition duration-300">Testimonials</a></li>
+        <li><a href="index.html#contact" class="hover:text-red-700 transition duration-300">Contact</a></li>
+        <li><a href="ai.html" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm font-semibold">AI Estimator</a></li>
       </ul>
     </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 border-t border-gray-200">
+      <a href="index.html#about" class="block py-2 hover:text-red-700">Products</a>
+      <a href="index.html#testimonials" class="block py-2 hover:text-red-700">Testimonials</a>
+      <a href="index.html#contact" class="block py-2 hover:text-red-700">Contact</a>
+      <a href="ai.html" target="_blank" class="block py-2 font-semibold text-blue-600">AI Material Estimator</a>
+    </div>
   </header>
+  <!-- END: Universal Responsive Header -->
 
-  <!-- Concrete Varieties & Prices Section -->
-  <section id="concrete-varieties" aria-label="Concrete Varieties and Pricing" class="container mx-auto py-20 px-6 text-center">
-    <h2 class="text-4xl font-bold mb-10 text-red-700">Concrete Varieties & Prices</h2>
-
-    <!-- Table -->
-    <div class="overflow-x-auto bg-white p-6 rounded-lg shadow-lg">
-      <table class="min-w-full table-auto border-collapse text-center">
-        <thead class="bg-gray-50">
-          <tr>
-            <th class="py-3 px-4 text-lg font-semibold text-gray-700">Concrete Type</th>
-            <th class="py-3 px-4 text-lg font-semibold text-gray-700">Price / m³</th>
-            <th class="py-3 px-4 text-lg font-semibold text-gray-700">Recommended Use</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-gray-200">
-          <tr class="hover:bg-gray-50">
-            <td class="py-4 px-6">Normal Strength Concrete (NSC)</td>
-            <td class="py-4 px-6 text-green-700 font-semibold">₹5,000</td>
-            <td class="py-4 px-6">General residential buildings and non-load bearing structures.</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="py-4 px-6">High Strength Concrete (HSC)</td>
-            <td class="py-4 px-6 text-green-700 font-semibold">₹7,500</td>
-            <td class="py-4 px-6">High-rise buildings, bridges, and heavy-duty structures.</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="py-4 px-6">Lightweight Concrete</td>
-            <td class="py-4 px-6 text-green-700 font-semibold">₹6,500</td>
-            <td class="py-4 px-6">Walls, floors, and roofs requiring insulation.</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="py-4 px-6">Self-Compacting Concrete (SCC)</td>
-            <td class="py-4 px-6 text-green-700 font-semibold">₹8,000</td>
-            <td class="py-4 px-6">Ornamental concrete and complex architectural forms.</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="py-4 px-6">Fiber Reinforced Concrete (FRC)</td>
-            <td class="py-4 px-6 text-green-700 font-semibold">₹9,000</td>
-            <td class="py-4 px-6">Pavements, sidewalks, and high-impact floors.</td>
-          </tr>
-        </tbody>
-      </table>
+  <!-- Main Content Section -->
+  <main class="container mx-auto px-6 py-20">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-red-700 mb-4">Our Concrete Solutions</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">From residential foundations to industrial-grade pavements, we offer a complete range of high-performance concrete mixes engineered for strength and durability.</p>
     </div>
-  </section>
 
-  <!-- Concrete Recommendations -->
-  <section id="recommendations" aria-label="Concrete Recommendations" class="container mx-auto px-6 py-20">
-    <h3 class="text-3xl font-semibold text-gray-800 mb-10 text-center">Which Concrete Should You Use?</h3>
-    <div class="grid gap-6 md:grid-cols-2">
-      <!-- Individual recommendation cards -->
-      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-        <h4 class="text-2xl font-semibold text-red-700">Normal Strength Concrete (NSC)</h4>
-        <p class="text-gray-700 mt-2">Ideal for residential and light construction, including foundations and non-structural walls.</p>
-      </div>
-      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-        <h4 class="text-2xl font-semibold text-red-700">High Strength Concrete (HSC)</h4>
-        <p class="text-gray-700 mt-2">Best for projects needing extra strength like high-rise buildings and bridges.</p>
-      </div>
-      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-        <h4 class="text-2xl font-semibold text-red-700">Lightweight Concrete</h4>
-        <p class="text-gray-700 mt-2">Perfect for insulated structures like partition walls and roof slabs.</p>
-      </div>
-      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-        <h4 class="text-2xl font-semibold text-red-700">Self-Compacting Concrete (SCC)</h4>
-        <p class="text-gray-700 mt-2">Excellent for decorative and intricate mold designs where vibration is hard to apply.</p>
-      </div>
-      <div class="bg-gray-50 p-6 rounded-lg shadow-md md:col-span-2">
-        <h4 class="text-2xl font-semibold text-red-700">Fiber Reinforced Concrete (FRC)</h4>
-        <p class="text-gray-700 mt-2">Ideal for high-traffic and impact-prone areas like highways and industrial zones.</p>
-      </div>
+    <!-- Product Cards Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Normal Strength Concrete -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-shadow duration-300">
+        <img src="nsc.jpg" alt="Pouring a normal strength concrete foundation" class="h-56 w-full object-cover">
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Normal Strength (NSC)</h3>
+          <p class="text-gray-600 mb-4 flex-1">The reliable choice for general residential buildings, foundations, driveways, and non-load-bearing structures.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">₹5,000 / m³</div>
+        </div>
+      </article>
+
+      <!-- High Strength Concrete -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-shadow duration-300">
+        <img src="hsc.jpg" alt="High-rise building under construction with high strength concrete" class="h-56 w-full object-cover">
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">High Strength (HSC)</h3>
+          <p class="text-gray-600 mb-4 flex-1">Engineered for demanding projects like high-rise buildings, long-span bridges, and heavy-duty industrial structures.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">₹7,500 / m³</div>
+        </div>
+      </article>
+      
+      <!-- Lightweight Concrete -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-shadow duration-300">
+        <img src="lightweight-concrete.jpg" alt="Lightweight concrete blocks used for insulation" class="h-56 w-full object-cover">
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Lightweight Concrete</h3>
+          <p class="text-gray-600 mb-4 flex-1">Reduces structural load while providing excellent thermal insulation. Perfect for partition walls and roof slabs.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">₹6,500 / m³</div>
+        </div>
+      </article>
+
+      <!-- Self-Compacting Concrete -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-shadow duration-300">
+        <img src="scc.jpg" alt="Smooth, architectural finish from self-compacting concrete" class="h-56 w-full object-cover">
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Self-Compacting (SCC)</h3>
+          <p class="text-gray-600 mb-4 flex-1">Flows effortlessly into complex forms without vibration, creating a smooth, superior finish for architectural and ornamental designs.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">₹8,000 / m³</div>
+        </div>
+      </article>
+      
+      <!-- Fiber Reinforced Concrete -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-shadow duration-300">
+        <img src="frc.jpg" alt="Durable fiber reinforced concrete pavement" class="h-56 w-full object-cover">
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Fiber Reinforced (FRC)</h3>
+          <p class="text-gray-600 mb-4 flex-1">Infused with fibers to enhance toughness and impact resistance. Ideal for industrial floors, pavements, and high-traffic areas.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">₹9,000 / m³</div>
+        </div>
+      </article>
+      
+      <!-- Custom Mixes -->
+      <article class="bg-gray-800 text-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-shadow duration-300">
+        <div class="p-6 flex-1 flex flex-col items-center justify-center text-center">
+            <i class="ph ph-wrench text-5xl text-red-500 mb-4"></i>
+            <h3 class="text-2xl font-bold mb-2">Need a Custom Mix?</h3>
+            <p class="text-gray-300 mb-4 flex-1">Our experts can design a custom concrete mix to meet the unique specifications of your project. Contact us to discuss your requirements.</p>
+            <a href="index.html#contact" class="mt-auto bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition-colors">
+                Contact an Expert
+            </a>
+        </div>
+      </article>
+
     </div>
-  </section>
+  </main>
 
-  <!-- Footer -->
-  <footer class="text-center py-6 bg-white shadow-inner text-gray-500 text-sm">
-    © 2025 AD Concrete. All rights reserved. | <a href="#about" class="hover:text-red-700">About</a> | <a href="#contact" class="hover:text-red-700">Contact</a>
+  <!-- START: Universal Footer -->
+  <footer class="bg-gray-900 text-white py-12 mt-20">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div><h3 class="text-xl font-bold mb-4">ASWIN142003</h3><p class="text-gray-400">Providing high-quality construction materials to build India's future.</p></div>
+        <div><h4 class="text-lg font-semibold mb-4">Quick Links</h4><ul class="space-y-2"><li><a href="index.html#about" class="text-gray-400 hover:text-white transition">Products</a></li><li><a href="index.html#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a></li><li><a href="index.html#contact" class="text-gray-400 hover:text-white transition">Contact Us</a></li></ul></div>
+        <div><h4 class="text-lg font-semibold mb-4">Our Products</h4><ul class="space-y-2"><li><a href="steel.html" class="text-gray-400 hover:text-white transition">Structural Steel</a></li><li><a href="Premium Cement.html" class="text-gray-400 hover:text-white transition">Premium Cement</a></li><li><a href="Concrete.html" class="text-gray-400 hover:text-white transition">Concrete</a></li><li><a href="Bricks-Concrete-Blocks.html" class="text-gray-400 hover:text-white transition">Bricks & Blocks</a></li></ul></div>
+        <div><h4 class="text-lg font-semibold mb-4">Newsletter</h4><p class="text-gray-400 mb-4">Get updates on new products and special offers.</p><form class="flex"><input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full"><button type="submit" class="bg-red-700 hover:bg-red-800 px-4 py-2 rounded-r-lg transition"><i class="ph ph-paper-plane-tilt"></i></button></form></div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center"><p class="text-gray-400 text-sm">© 2024 ASWIN142003. All rights reserved. Designed with precision.</p></div>
+    </div>
   </footer>
+  <!-- END: Universal Footer -->
 
+  <!-- Universal Mobile Menu Script -->
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuButton) { mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); }); }
+  </script>
 </body>
 </html>

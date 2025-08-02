@@ -3,91 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wood Varieties & Prices</title>
+  <title>Timber & Wood Solutions | ASWIN142003</title>
+  <meta name="description" content="Explore our collection of premium timber and wood products, including Teak, Sal, Plywood, and MDF, with clear pricing and usage recommendations.">
+  
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Icons and Favicon -->
+  <link href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
 
-  <!-- Navbar -->
-  <header class="sticky top-0 bg-white shadow z-50">
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="index.html">
-            <h1 class="text-2xl font-bold text-red-700 cursor-pointer">🛠️ASWIN142003</h1>
-          </a>
-      <ul class="flex space-x-6 text-gray-700 font-medium">
-        <li><a href="#about" class="hover:text-red-700 transition">About</a></li>
-        <li><a href="#contact" class="hover:text-red-700 transition">Contact</a></li>
+  <!-- START: Universal Responsive Header -->
+  <header class="sticky top-0 bg-white shadow-md z-50">
+    <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2">
+        <span class="text-red-600 text-2xl">🛠️</span>
+        <h1 class="text-2xl font-bold text-red-700 tracking-tight">ASWIN142003</h1>
+      </a>
+      <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+        <i class="ph ph-list text-3xl"></i>
+      </button>
+      <ul class="hidden md:flex space-x-8 text-gray-700 font-medium items-center">
+        <li><a href="index.html#about" class="hover:text-red-700 transition duration-300">Products</a></li>
+        <li><a href="index.html#testimonials" class="hover:text-red-700 transition duration-300">Testimonials</a></li>
+        <li><a href="index.html#contact" class="hover:text-red-700 transition duration-300">Contact</a></li>
+        <li><a href="ai.html" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm font-semibold">AI Estimator</a></li>
       </ul>
     </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 border-t border-gray-200">
+      <a href="index.html#about" class="block py-2 hover:text-red-700">Products</a>
+      <a href="index.html#testimonials" class="block py-2 hover:text-red-700">Testimonials</a>
+      <a href="index.html#contact" class="block py-2 hover:text-red-700">Contact</a>
+      <a href="ai.html" target="_blank" class="block py-2 font-semibold text-blue-600">AI Material Estimator</a>
+    </div>
   </header>
+  <!-- END: Universal Responsive Header -->
 
-  <!-- Wood Varieties & Prices Section -->
-  <section id="wood-varieties" class="container mx-auto px-6 py-20 text-center">
-    <h2 class="text-4xl font-bold text-red-700 mb-12">Wood Varieties & Prices</h2>
-
-    <!-- Price Table -->
-    <div class="overflow-x-auto bg-white rounded-lg shadow-md">
-      <table class="min-w-full text-center table-auto">
-        <thead class="bg-gray-50">
-          <tr>
-            <th class="py-4 px-6 text-lg font-semibold text-gray-700">Wood Type</th>
-            <th class="py-4 px-6 text-lg font-semibold text-gray-700">Price</th>
-            <th class="py-4 px-6 text-lg font-semibold text-gray-700">Recommended Use</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="border-t hover:bg-gray-50 transition">
-            <td class="py-4 px-6">Teak Wood</td>
-            <td class="py-4 px-6 text-green-700 font-semibold">₹3,000 / cu. ft</td>
-            <td class="py-4 px-6">High-end furniture, doors, and window frames.</td>
-          </tr>
-          <tr class="border-t hover:bg-gray-50 transition">
-            <td class="py-4 px-6">Sal Wood</td>
-            <td class="py-4 px-6 text-green-700 font-semibold">₹2,000 / cu. ft</td>
-            <td class="py-4 px-6">Beams, door frames, and structural frameworks.</td>
-          </tr>
-          <tr class="border-t hover:bg-gray-50 transition">
-            <td class="py-4 px-6">Plywood</td>
-            <td class="py-4 px-6 text-green-700 font-semibold">₹60 / sq. ft</td>
-            <td class="py-4 px-6">Wardrobes, cabinets, wall paneling.</td>
-          </tr>
-          <tr class="border-t hover:bg-gray-50 transition">
-            <td class="py-4 px-6">MDF</td>
-            <td class="py-4 px-6 text-green-700 font-semibold">₹40 / sq. ft</td>
-            <td class="py-4 px-6">Interior furniture, decor panels, budget projects.</td>
-          </tr>
-        </tbody>
-      </table>
+  <!-- Main Content -->
+  <main class="container mx-auto px-6 py-20">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-red-700 mb-4">Timber & Wood Solutions</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">From robust structural timbers to elegant finishing boards, we provide high-quality wood products for every construction and furnishing need.</p>
     </div>
 
-    <!-- Wood Recommendations -->
-    <div class="mt-16">
-      <h3 class="text-3xl font-semibold text-gray-800 mb-10">Which Wood Should You Use?</h3>
-      <div class="grid md:grid-cols-2 gap-8 text-left">
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h4 class="text-2xl text-red-700 font-semibold mb-2">Teak Wood</h4>
-          <p class="text-gray-700">Perfect for luxury interiors and outdoor furniture. Naturally resistant to water, decay, and insects.</p>
+    <!-- Product Cards Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Teak Wood Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="teak-wood.jpg" alt="A luxurious, handcrafted teak wood dining table" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <div class="flex items-center text-red-600 mb-2"><i class="ph ph-crown-simple text-xl mr-2"></i><span class="text-sm font-semibold uppercase tracking-wider">For Ultimate Luxury</span></div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Teak Wood</h3>
+          <p class="text-gray-600 mb-4 flex-1">Renowned for its exceptional durability and natural water resistance. The premium choice for high-end furniture, doors, window frames, and outdoor decking.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">₹3,000 / cu. ft</div>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h4 class="text-2xl text-red-700 font-semibold mb-2">Sal Wood</h4>
-          <p class="text-gray-700">Ideal for load-bearing structures. Dense, durable, and naturally termite-resistant.</p>
+      </article>
+
+      <!-- Sal Wood Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="sal-wood.jpg" alt="Strong Sal wood beams supporting a roof structure" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <div class="flex items-center text-red-600 mb-2"><i class="ph ph-house-line text-xl mr-2"></i><span class="text-sm font-semibold uppercase tracking-wider">For Structural Strength</span></div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Sal Wood</h3>
+          <p class="text-gray-600 mb-4 flex-1">A heavy, hard, and tough timber that is highly resistant to termites and decay. Ideal for structural beams, columns, bridges, and door frames.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">₹2,000 / cu. ft</div>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h4 class="text-2xl text-red-700 font-semibold mb-2">Plywood</h4>
-          <p class="text-gray-700">Flexible and cost-effective for modular furniture, partitions, and interior cabinetry.</p>
+      </article>
+
+      <!-- Plywood Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="plywood.jpg" alt="A modern kitchen with clean plywood cabinets" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <div class="flex items-center text-red-600 mb-2"><i class="ph ph-stack text-xl mr-2"></i><span class="text-sm font-semibold uppercase tracking-wider">For Versatile Interiors</span></div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Plywood</h3>
+          <p class="text-gray-600 mb-4 flex-1">An engineered wood sheet that is strong, stable, and cost-effective. The go-to material for modular furniture, cabinets, wardrobes, and wall paneling.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">from ₹60 / sq. ft</div>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h4 class="text-2xl text-red-700 font-semibold mb-2">MDF</h4>
-          <p class="text-gray-700">Affordable and smooth-surfaced for painted furniture or design trims in dry areas.</p>
+      </article>
+
+      <!-- MDF Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="mdf.jpg" alt="A decorative wall panel made from smooth MDF" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <div class="flex items-center text-red-600 mb-2"><i class="ph ph-paint-brush text-xl mr-2"></i><span class="text-sm font-semibold uppercase tracking-wider">For Smooth Finishes</span></div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">MDF (Medium-Density Fibreboard)</h3>
+          <p class="text-gray-600 mb-4 flex-1">An affordable board with a very smooth surface, perfect for painting. Ideal for decorative panels, cabinet doors, and budget-friendly interior furniture in dry areas.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">from ₹40 / sq. ft</div>
         </div>
+      </article>
+      
+      <!-- Custom Woodworking Card -->
+      <article class="bg-gray-800 text-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center justify-center text-center p-6 group">
+        <i class="ph ph-hand-saw text-5xl text-red-500 mb-4"></i>
+        <h3 class="text-2xl font-bold mb-2">Custom Woodworking</h3>
+        <p class="text-gray-300 mb-6 flex-1">Need specific cuts, treatments, or finishes? Our workshop can prepare timber and boards to your exact specifications. Contact us to discuss your project.</p>
+        <a href="index.html#contact" class="mt-auto bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition-colors">
+            Get a Custom Quote
+        </a>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- START: Universal Footer -->
+  <footer class="bg-gray-900 text-white py-12 mt-20">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div><h3 class="text-xl font-bold mb-4">ASWIN142003</h3><p class="text-gray-400">Providing high-quality construction materials to build India's future.</p></div>
+        <div><h4 class="text-lg font-semibold mb-4">Quick Links</h4><ul class="space-y-2"><li><a href="index.html#about" class="text-gray-400 hover:text-white transition">Products</a></li><li><a href="index.html#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a></li><li><a href="index.html#contact" class="text-gray-400 hover:text-white transition">Contact Us</a></li></ul></div>
+        <div><h4 class="text-lg font-semibold mb-4">Our Products</h4><ul class="space-y-2"><li><a href="steel.html" class="text-gray-400 hover:text-white transition">Structural Steel</a></li><li><a href="Premium Cement.html" class="text-gray-400 hover:text-white transition">Premium Cement</a></li><li><a href="Concrete.html" class="text-gray-400 hover:text-white transition">Concrete</a></li><li><a href="Bricks-Concrete-Blocks.html" class="text-gray-400 hover:text-white transition">Bricks & Blocks</a></li></ul></div>
+        <div><h4 class="text-lg font-semibold mb-4">Newsletter</h4><p class="text-gray-400 mb-4">Get updates on new products and special offers.</p><form class="flex"><input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full"><button type="submit" class="bg-red-700 hover:bg-red-800 px-4 py-2 rounded-r-lg transition"><i class="ph ph-paper-plane-tilt"></i></button></form></div>
       </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center"><p class="text-gray-400 text-sm">© 2024 ASWIN142003. All rights reserved. Designed with precision.</p></div>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center py-6 mt-12 text-gray-500 text-sm border-t">
-    © 2025 ASWIN142003. All rights reserved.
   </footer>
+  <!-- END: Universal Footer -->
+
+  <!-- Universal Mobile Menu Script -->
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuButton) { mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); }); }
+  </script>
 
 </body>
 </html>

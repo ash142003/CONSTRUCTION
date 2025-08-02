@@ -2,107 +2,140 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tile Varieties & Prices | AD Tiles & Stones</title>
-  <meta name="description" content="Explore a variety of tile types, their prices, and recommendations for use in different construction projects at AD Tiles & Stones.">
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale-1.0" />
+  <title>Tile Collections | ASWIN142003</title>
+  <meta name="description" content="Explore our premium collection of ceramic, porcelain, vitrified, and natural stone tiles with clear pricing and design recommendations.">
+  
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Icons and Favicon -->
+  <link href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
 
-  <!-- Navbar -->
+  <!-- START: Universal Responsive Header -->
   <header class="sticky top-0 bg-white shadow-md z-50">
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="index.html">
-            <h1 class="text-2xl font-bold text-red-700 cursor-pointer">🏠ASWIN142003</h1>
-          </a>
-      <ul class="flex space-x-6 text-gray-700 font-medium">
-        <li><a href="#about" class="hover:text-red-700 transition-colors duration-200">About</a></li>
-        <li><a href="#contact" class="hover:text-red-700 transition-colors duration-200">Contact</a></li>
+    <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2">
+        <span class="text-red-600 text-2xl">🛠️</span>
+        <h1 class="text-2xl font-bold text-red-700 tracking-tight">ASWIN142003</h1>
+      </a>
+      <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+        <i class="ph ph-list text-3xl"></i>
+      </button>
+      <ul class="hidden md:flex space-x-8 text-gray-700 font-medium items-center">
+        <li><a href="index.html#about" class="hover:text-red-700 transition duration-300">Products</a></li>
+        <li><a href="index.html#testimonials" class="hover:text-red-700 transition duration-300">Testimonials</a></li>
+        <li><a href="index.html#contact" class="hover:text-red-700 transition duration-300">Contact</a></li>
+        <li><a href="ai.html" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm font-semibold">AI Estimator</a></li>
       </ul>
     </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 border-t border-gray-200">
+      <a href="index.html#about" class="block py-2 hover:text-red-700">Products</a>
+      <a href="index.html#testimonials" class="block py-2 hover:text-red-700">Testimonials</a>
+      <a href="index.html#contact" class="block py-2 hover:text-red-700">Contact</a>
+      <a href="ai.html" target="_blank" class="block py-2 font-semibold text-blue-600">AI Material Estimator</a>
+    </div>
   </header>
+  <!-- END: Universal Responsive Header -->
 
   <!-- Main Content -->
-  <main>
-    <!-- Tile Varieties Section -->
-    <section id="tile-varieties" class="container mx-auto py-20 px-6 text-center">
-      <h2 class="text-4xl font-bold mb-10 text-red-700">Tile Varieties & Prices</h2>
+  <main class="container mx-auto px-6 py-20">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-red-700 mb-4">Our Premium Tile Collections</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">Transform any space with our curated selection of high-quality tiles. From timeless elegance to modern durability, find the perfect finish for your project.</p>
+    </div>
 
-      <!-- Table -->
-      <div class="overflow-x-auto bg-white p-6 rounded-xl shadow-lg">
-        <table class="min-w-full table-auto text-center">
-          <thead class="bg-gray-100 text-gray-700">
-            <tr>
-              <th class="py-3 px-4 text-lg font-semibold">Tile Type</th>
-              <th class="py-3 px-4 text-lg font-semibold">Price per Sq. Ft.</th>
-              <th class="py-3 px-4 text-lg font-semibold">Recommended Use</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-t hover:bg-gray-50 transition">
-              <td class="py-4 px-6">Ceramic Tiles</td>
-              <td class="py-4 px-6 text-green-700 font-semibold">₹25 - ₹80</td>
-              <td class="py-4 px-6">Perfect for walls, bathrooms, and kitchens due to water resistance and variety of designs.</td>
-            </tr>
-            <tr class="border-t hover:bg-gray-50 transition">
-              <td class="py-4 px-6">Porcelain Tiles</td>
-              <td class="py-4 px-6 text-green-700 font-semibold">₹50 - ₹200</td>
-              <td class="py-4 px-6">Durable and low-maintenance, ideal for floors (indoor/outdoor) and high-traffic areas.</td>
-            </tr>
-            <tr class="border-t hover:bg-gray-50 transition">
-              <td class="py-4 px-6">Vitrified Tiles</td>
-              <td class="py-4 px-6 text-green-700 font-semibold">₹40 - ₹150</td>
-              <td class="py-4 px-6">Great for living rooms, offices, and commercial spaces; stain-resistant and glossy finish.</td>
-            </tr>
-            <tr class="border-t hover:bg-gray-50 transition">
-              <td class="py-4 px-6">Natural Stone (Marble)</td>
-              <td class="py-4 px-6 text-green-700 font-semibold">₹200 - ₹800</td>
-              <td class="py-4 px-6">Luxury option for flooring, countertops, and accent walls; requires sealing.</td>
-            </tr>
-            <tr class="border-t hover:bg-gray-50 transition">
-              <td class="py-4 px-6">Mosaic Tiles</td>
-              <td class="py-4 px-6 text-green-700 font-semibold">₹100 - ₹500</td>
-              <td class="py-4 px-6">Decorative choice for backsplashes, pools, and artistic wall designs.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <!-- Product Cards Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <!-- Tile Recommendations -->
-      <section aria-label="Tile Recommendations" class="mt-16">
-        <h3 class="text-3xl font-semibold text-gray-800 mb-8">Which Tile Should You Use?</h3>
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <!-- Recommendation Cards -->
-          <article class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-            <h4 class="text-xl font-bold text-red-700 mb-2">Ceramic Tiles</h4>
-            <p>Affordable and versatile, ceramic tiles are best for walls, bathrooms, and kitchens. They come in endless colors/patterns but are less durable than porcelain for floors.</p>
-          </article>
-          <article class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-            <h4 class="text-xl font-bold text-red-700 mb-2">Porcelain Tiles</h4>
-            <p>Highly durable and water-resistant, porcelain is ideal for both indoor and outdoor floors. Its density makes it suitable for heavy foot traffic and wet areas.</p>
-          </article>
-          <article class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-            <h4 class="text-xl font-bold text-red-700 mb-2">Vitrified Tiles</h4>
-            <p>A budget-friendly alternative to natural stone, vitrified tiles offer a polished look with minimal maintenance. Perfect for living rooms and offices.</p>
-          </article>
-          <article class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-            <h4 class="text-xl font-bold text-red-700 mb-2">Natural Stone (Marble/Granite)</h4>
-            <p>For a premium, timeless appeal, natural stone adds elegance to floors and countertops. Requires periodic sealing but offers unmatched beauty.</p>
-          </article>
-          <article class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-            <h4 class="text-xl font-bold text-red-700 mb-2">Mosaic Tiles</h4>
-            <p>Small, decorative tiles perfect for creating intricate designs on walls, backsplashes, or pools. Available in glass, ceramic, or stone.</p>
-          </article>
+      <!-- Ceramic Tiles Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="ceramic-tiles.jpg" alt="A stylish bathroom wall with patterned ceramic tiles" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Ceramic Tiles</h3>
+          <p class="text-gray-600 mb-4 flex-1">Affordable and versatile, offering endless design possibilities. Perfect for walls in kitchens, bathrooms, and other low-traffic wet areas.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">₹25 - ₹80 / sq.ft</div>
         </div>
-      </section>
-    </section>
+      </article>
+
+      <!-- Porcelain Tiles Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="porcelain-tiles.jpg" alt="A busy commercial lobby with durable porcelain floor tiles" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Porcelain Tiles</h3>
+          <p class="text-gray-600 mb-4 flex-1">Extremely dense and durable, making them ideal for high-traffic floors, both indoors and outdoors. Highly resistant to stains, scratches, and moisture.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">₹50 - ₹200 / sq.ft</div>
+        </div>
+      </article>
+
+      <!-- Vitrified Tiles Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="vitrified-tiles.jpg" alt="A glossy, modern living room with large vitrified floor tiles" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Vitrified Tiles</h3>
+          <p class="text-gray-600 mb-4 flex-1">Offers the glossy, sophisticated look of natural stone with minimal maintenance. A popular choice for living rooms, bedrooms, and office spaces.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">₹40 - ₹150 / sq.ft</div>
+        </div>
+      </article>
+      
+      <!-- Natural Stone Tiles Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="natural-stone-tiles.jpg" alt="A luxurious marble floor in an elegant home" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Natural Stone (Marble/Granite)</h3>
+          <p class="text-gray-600 mb-4 flex-1">For unmatched luxury and a timeless appeal. Each tile is unique, adding unparalleled character to floors, countertops, and accent walls.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">₹200 - ₹800+ / sq.ft</div>
+        </div>
+      </article>
+
+      <!-- Mosaic Tiles Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="mosaic-tiles.jpg" alt="A detailed kitchen backsplash made from intricate mosaic tiles" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Mosaic Tiles</h3>
+          <p class="text-gray-600 mb-4 flex-1">Small, decorative tiles perfect for creating artistic patterns and focal points. Ideal for backsplashes, shower floors, and swimming pools.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">₹100 - ₹500 / sq.ft</div>
+        </div>
+      </article>
+
+      <!-- Showroom/Samples Card -->
+      <article class="bg-gray-800 text-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center justify-center text-center p-6 group">
+        <i class="ph ph-sparkle text-5xl text-red-500 mb-4"></i>
+        <h3 class="text-2xl font-bold mb-2">Find Your Perfect Finish</h3>
+        <p class="text-gray-300 mb-6 flex-1">Choosing the right tile can be overwhelming. Visit our showroom or contact us to request samples and get expert design advice for your project.</p>
+        <a href="index.html#contact" class="mt-auto bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition-colors">
+            Contact Us
+        </a>
+      </article>
+
+    </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-white mt-16 py-6 text-center text-gray-500 text-sm border-t">
-    © 2025 <strong>AD Tiles & Stones</strong>. All rights reserved.
+  <!-- START: Universal Footer -->
+  <footer class="bg-gray-900 text-white py-12 mt-20">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div><h3 class="text-xl font-bold mb-4">ASWIN142003</h3><p class="text-gray-400">Providing high-quality construction materials to build India's future.</p></div>
+        <div><h4 class="text-lg font-semibold mb-4">Quick Links</h4><ul class="space-y-2"><li><a href="index.html#about" class="text-gray-400 hover:text-white transition">Products</a></li><li><a href="index.html#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a></li><li><a href="index.html#contact" class="text-gray-400 hover:text-white transition">Contact Us</a></li></ul></div>
+        <div><h4 class="text-lg font-semibold mb-4">Our Products</h4><ul class="space-y-2"><li><a href="steel.html" class="text-gray-400 hover:text-white transition">Structural Steel</a></li><li><a href="Premium Cement.html" class="text-gray-400 hover:text-white transition">Premium Cement</a></li><li><a href="Concrete.html" class="text-gray-400 hover:text-white transition">Concrete</a></li><li><a href="Bricks-Concrete-Blocks.html" class="text-gray-400 hover:text-white transition">Bricks & Blocks</a></li></ul></div>
+        <div><h4 class="text-lg font-semibold mb-4">Newsletter</h4><p class="text-gray-400 mb-4">Get updates on new products and special offers.</p><form class="flex"><input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full"><button type="submit" class="bg-red-700 hover:bg-red-800 px-4 py-2 rounded-r-lg transition"><i class="ph ph-paper-plane-tilt"></i></button></form></div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center"><p class="text-gray-400 text-sm">© 2024 ASWIN142003. All rights reserved. Designed with precision.</p></div>
+    </div>
   </footer>
+  <!-- END: Universal Footer -->
+
+  <!-- Universal Mobile Menu Script -->
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuButton) { mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); }); }
+  </script>
 
 </body>
 </html>

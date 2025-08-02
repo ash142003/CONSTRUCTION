@@ -3,106 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Steel Varieties & Prices | ASWIN142003</title>
-  <meta name="description" content="Discover a range of steel varieties with updated prices and recommendations for different construction needs at ASWIN142003.">
-  <link rel="stylesheet" href="style.css" />
+  <title>Structural Steel Solutions | ASWIN142003</title>
+  <meta name="description" content="Discover a full range of structural steel including TMT bars, Carbon, Alloy, and Stainless Steel with clear pricing and usage recommendations.">
+  
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Icons and Favicon -->
+  <link href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
 
-  <!-- Navbar -->
+  <!-- START: Universal Responsive Header -->
   <header class="sticky top-0 bg-white shadow-md z-50">
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="index.html">
-            <h1 class="text-2xl font-bold text-red-700 cursor-pointer">🛠️ASWIN142003</h1>
-          </a>
-      <ul class="flex space-x-6 text-gray-700 font-medium">
-        <li><a href="#about" class="hover:text-red-700 transition-colors duration-200">About</a></li>
-        <li><a href="#contact" class="hover:text-red-700 transition-colors duration-200">Contact</a></li>
+    <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2">
+        <span class="text-red-600 text-2xl">🛠️</span>
+        <h1 class="text-2xl font-bold text-red-700 tracking-tight">ASWIN142003</h1>
+      </a>
+      <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+        <i class="ph ph-list text-3xl"></i>
+      </button>
+      <ul class="hidden md:flex space-x-8 text-gray-700 font-medium items-center">
+        <li><a href="index.html#about" class="hover:text-red-700 transition duration-300">Products</a></li>
+        <li><a href="index.html#testimonials" class="hover:text-red-700 transition duration-300">Testimonials</a></li>
+        <li><a href="index.html#contact" class="hover:text-red-700 transition duration-300">Contact</a></li>
+        <li><a href="ai.html" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm font-semibold">AI Estimator</a></li>
       </ul>
     </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 border-t border-gray-200">
+      <a href="index.html#about" class="block py-2 hover:text-red-700">Products</a>
+      <a href="index.html#testimonials" class="block py-2 hover:text-red-700">Testimonials</a>
+      <a href="index.html#contact" class="block py-2 hover:text-red-700">Contact</a>
+      <a href="ai.html" target="_blank" class="block py-2 font-semibold text-blue-600">AI Material Estimator</a>
+    </div>
   </header>
+  <!-- END: Universal Responsive Header -->
 
   <!-- Main Content -->
-  <main>
-    <!-- Steel Varieties Section -->
-    <section id="steel-varieties" class="container mx-auto py-20 px-6 text-center">
-      <h2 class="text-4xl font-bold mb-10 text-red-700">Steel Varieties & Prices</h2>
+  <main class="container mx-auto px-6 py-20">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-red-700 mb-4">Structural Steel Solutions</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">The backbone of modern construction. We supply a comprehensive range of high-grade steel, engineered for superior strength, durability, and performance.</p>
+    </div>
 
-      <!-- Table -->
-      <div class="overflow-x-auto bg-white p-6 rounded-xl shadow-lg">
-        <table class="min-w-full table-auto text-center">
-          <thead class="bg-gray-100 text-gray-700">
-            <tr>
-              <th class="py-3 px-4 text-lg font-semibold">Steel Type</th>
-              <th class="py-3 px-4 text-lg font-semibold">Price per Ton</th>
-              <th class="py-3 px-4 text-lg font-semibold">Recommended Use</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-t hover:bg-gray-50 transition">
-              <td class="py-4 px-6">TMT Steel Bars</td>
-              <td class="py-4 px-6 text-green-700 font-semibold">₹40,000</td>
-              <td class="py-4 px-6">Reinforced concrete in buildings and bridges.</td>
-            </tr>
-            <tr class="border-t hover:bg-gray-50 transition">
-              <td class="py-4 px-6">Mild Steel</td>
-              <td class="py-4 px-6 text-green-700 font-semibold">₹35,000</td>
-              <td class="py-4 px-6">Light construction, welding, and frames.</td>
-            </tr>
-            <tr class="border-t hover:bg-gray-50 transition">
-              <td class="py-4 px-6">Carbon Steel</td>
-              <td class="py-4 px-6 text-green-700 font-semibold">₹45,000</td>
-              <td class="py-4 px-6">Bridges, machinery, high-stress areas.</td>
-            </tr>
-            <tr class="border-t hover:bg-gray-50 transition">
-              <td class="py-4 px-6">Alloy Steel</td>
-              <td class="py-4 px-6 text-green-700 font-semibold">₹50,000</td>
-              <td class="py-4 px-6">Power plants, aerospace, heavy industries.</td>
-            </tr>
-            <tr class="border-t hover:bg-gray-50 transition">
-              <td class="py-4 px-6">Stainless Steel</td>
-              <td class="py-4 px-6 text-green-700 font-semibold">₹65,000</td>
-              <td class="py-4 px-6">Kitchens, pipelines, coastal construction.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <!-- Product Cards Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <!-- Steel Recommendations -->
-      <section aria-label="Steel Recommendations" class="mt-16">
-        <h3 class="text-3xl font-semibold text-gray-800 mb-8">Which Steel Should You Use?</h3>
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <!-- Recommendation Cards -->
-          <article class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-            <h4 class="text-xl font-bold text-red-700 mb-2">TMT Steel Bars</h4>
-            <p>Best for reinforced concrete, high-rises, dams, and bridges due to their tensile strength.</p>
-          </article>
-          <article class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-            <h4 class="text-xl font-bold text-red-700 mb-2">Mild Steel</h4>
-            <p>Ideal for cost-effective structures like partitions and railings. Not suited for heavy loads.</p>
-          </article>
-          <article class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-            <h4 class="text-xl font-bold text-red-700 mb-2">Carbon Steel</h4>
-            <p>Durable and stress-resistant, great for industrial and heavy commercial use.</p>
-          </article>
-          <article class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-            <h4 class="text-xl font-bold text-red-700 mb-2">Alloy Steel</h4>
-            <p>Engineered for demanding environments — power plants, aerospace, and machinery.</p>
-          </article>
-          <article class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-            <h4 class="text-xl font-bold text-red-700 mb-2">Stainless Steel</h4>
-            <p>Corrosion-resistant and clean finish makes it perfect for kitchens and coastal structures.</p>
-          </article>
+      <!-- TMT Steel Bars Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="tmt-steel.jpg" alt="TMT steel bars forming a reinforcement cage for a concrete column" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">TMT Steel Bars</h3>
+          <p class="text-gray-600 mb-4 flex-1">High-tensile, thermo-mechanically treated bars are essential for reinforcing concrete. The first choice for residential, commercial, and infrastructure projects.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">from ₹40,000 / ton</div>
         </div>
-      </section>
-    </section>
+      </article>
+
+      <!-- Mild Steel Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="mild-steel.jpg" alt="Welder working on a mild steel frame" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Mild Steel</h3>
+          <p class="text-gray-600 mb-4 flex-1">A versatile and cost-effective option known for its excellent weldability. Ideal for gates, railings, window grills, and light structural frames.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">from ₹35,000 / ton</div>
+        </div>
+      </article>
+
+      <!-- Carbon Steel Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="carbon-steel.jpg" alt="A large bridge structure made from carbon steel beams" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Carbon Steel</h3>
+          <p class="text-gray-600 mb-4 flex-1">Offers exceptional strength and hardness, making it perfect for high-stress applications like bridges, industrial machinery, and heavy equipment parts.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">from ₹45,000 / ton</div>
+        </div>
+      </article>
+      
+      <!-- Alloy Steel Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="alloy-steel.jpg" alt="Precision-engineered gears made from alloy steel" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Alloy Steel</h3>
+          <p class="text-gray-600 mb-4 flex-1">Combined with elements like chromium or nickel for enhanced properties like toughness and corrosion resistance. Used in power plants, aerospace, and automotive parts.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">from ₹50,000 / ton</div>
+        </div>
+      </article>
+
+      <!-- Stainless Steel Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="stainless-steel.jpg" alt="A modern kitchen with stainless steel countertops and fixtures" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Stainless Steel</h3>
+          <p class="text-gray-600 mb-4 flex-1">The ultimate choice for corrosion resistance and a clean, aesthetic finish. Perfect for kitchens, architectural cladding, pipelines, and coastal construction.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">from ₹65,000 / ton</div>
+        </div>
+      </article>
+
+      <!-- Custom Fabrication Card -->
+      <article class="bg-gray-800 text-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center justify-center text-center p-6 group">
+        <i class="ph ph-wrench text-5xl text-red-500 mb-4"></i>
+        <h3 class="text-2xl font-bold mb-2">Custom Fabrication</h3>
+        <p class="text-gray-300 mb-6 flex-1">Need specific lengths, cuts, or shapes? Our fabrication services can prepare steel exactly to your project's specifications, saving you time and labor on-site.</p>
+        <a href="index.html#contact" class="mt-auto bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition-colors">
+            Request a Quote
+        </a>
+      </article>
+
+    </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-white mt-16 py-6 text-center text-gray-500 text-sm border-t">
-    © 2025 <strong>ASWIN142003</strong>. All rights reserved.
+  <!-- START: Universal Footer -->
+  <footer class="bg-gray-900 text-white py-12 mt-20">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div><h3 class="text-xl font-bold mb-4">ASWIN142003</h3><p class="text-gray-400">Providing high-quality construction materials to build India's future.</p></div>
+        <div><h4 class="text-lg font-semibold mb-4">Quick Links</h4><ul class="space-y-2"><li><a href="index.html#about" class="text-gray-400 hover:text-white transition">Products</a></li><li><a href="index.html#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a></li><li><a href="index.html#contact" class="text-gray-400 hover:text-white transition">Contact Us</a></li></ul></div>
+        <div><h4 class="text-lg font-semibold mb-4">Our Products</h4><ul class="space-y-2"><li><a href="steel.html" class="text-gray-400 hover:text-white transition">Structural Steel</a></li><li><a href="Premium Cement.html" class="text-gray-400 hover:text-white transition">Premium Cement</a></li><li><a href="Concrete.html" class="text-gray-400 hover:text-white transition">Concrete</a></li><li><a href="Bricks-Concrete-Blocks.html" class="text-gray-400 hover:text-white transition">Bricks & Blocks</a></li></ul></div>
+        <div><h4 class="text-lg font-semibold mb-4">Newsletter</h4><p class="text-gray-400 mb-4">Get updates on new products and special offers.</p><form class="flex"><input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full"><button type="submit" class="bg-red-700 hover:bg-red-800 px-4 py-2 rounded-r-lg transition"><i class="ph ph-paper-plane-tilt"></i></button></form></div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center"><p class="text-gray-400 text-sm">© 2024 ASWIN142003. All rights reserved. Designed with precision.</p></div>
+    </div>
   </footer>
+  <!-- END: Universal Footer -->
+
+  <!-- Universal Mobile Menu Script -->
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuButton) { mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); }); }
+  </script>
 
 </body>
 </html>

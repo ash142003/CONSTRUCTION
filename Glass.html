@@ -3,97 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Glass Products & Prices | ASWIN142003</title>
-  <meta name="description" content="Explore high-quality glass products including tempered, laminated, frosted, and insulated glass with prices and usage suggestions.">
-  <link rel="stylesheet" href="style.css" />
+  <title>Architectural Glass Solutions | ASWIN142003</title>
+  <meta name="description" content="Explore high-quality tempered, laminated, frosted, and insulated glass solutions from ASWIN142003, with pricing and usage suggestions for modern construction.">
+  
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Icons and Favicon -->
+  <link href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
 
-  <!-- Navbar -->
+  <!-- START: Universal Responsive Header -->
   <header class="sticky top-0 bg-white shadow-md z-50">
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="index.html">
-        <h1 class="text-2xl font-bold text-red-700 cursor-pointer">🛠️ ASWIN142003</h1>
+    <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2">
+        <span class="text-red-600 text-2xl">🛠️</span>
+        <h1 class="text-2xl font-bold text-red-700 tracking-tight">ASWIN142003</h1>
       </a>
-      <ul class="flex space-x-6 text-gray-700 font-medium">
-        <li><a href="#about" class="hover:text-red-700 transition-colors duration-200">About</a></li>
-        <li><a href="#contact" class="hover:text-red-700 transition-colors duration-200">Contact</a></li>
+      <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+        <i class="ph ph-list text-3xl"></i>
+      </button>
+      <ul class="hidden md:flex space-x-8 text-gray-700 font-medium items-center">
+        <li><a href="index.html#about" class="hover:text-red-700 transition duration-300">Products</a></li>
+        <li><a href="index.html#testimonials" class="hover:text-red-700 transition duration-300">Testimonials</a></li>
+        <li><a href="index.html#contact" class="hover:text-red-700 transition duration-300">Contact</a></li>
+        <li><a href="ai.html" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm font-semibold">AI Estimator</a></li>
       </ul>
     </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 border-t border-gray-200">
+      <a href="index.html#about" class="block py-2 hover:text-red-700">Products</a>
+      <a href="index.html#testimonials" class="block py-2 hover:text-red-700">Testimonials</a>
+      <a href="index.html#contact" class="block py-2 hover:text-red-700">Contact</a>
+      <a href="ai.html" target="_blank" class="block py-2 font-semibold text-blue-600">AI Material Estimator</a>
+    </div>
   </header>
+  <!-- END: Universal Responsive Header -->
 
   <!-- Main Content -->
-  <main>
-    <!-- Glass Products Section -->
-    <section id="glass-products" class="container mx-auto py-20 px-6 text-center">
-      <h2 class="text-4xl font-bold mb-10 text-red-700">Glass Products & Prices</h2>
+  <main class="container mx-auto px-6 py-20">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-red-700 mb-4">Architectural Glass Solutions</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">Enhance your spaces with our premium glass products, engineered for clarity, safety, and performance.</p>
+    </div>
 
-      <!-- Table -->
-      <div class="overflow-x-auto bg-white p-6 rounded-xl shadow-lg">
-        <table class="min-w-full table-auto text-center">
-          <thead class="bg-gray-100 text-gray-700">
-            <tr>
-              <th class="py-3 px-4 text-lg font-semibold">Glass Type</th>
-              <th class="py-3 px-4 text-lg font-semibold">Size</th>
-              <th class="py-3 px-4 text-lg font-semibold">Price / sq.ft</th>
-              <th class="py-3 px-4 text-lg font-semibold">Recommended Use</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-t hover:bg-gray-50 transition">
-              <td class="py-4 px-6">Tempered Glass</td>
-              <td class="py-4 px-6">4' x 6'</td>
-              <td class="py-4 px-6 text-green-700 font-semibold">₹100</td>
-              <td class="py-4 px-6">Windows, doors, shower enclosures</td>
-            </tr>
-            <tr class="border-t hover:bg-gray-50 transition">
-              <td class="py-4 px-6">Laminated Glass</td>
-              <td class="py-4 px-6">4' x 6'</td>
-              <td class="py-4 px-6 text-green-700 font-semibold">₹120</td>
-              <td class="py-4 px-6">Security glazing, soundproofing</td>
-            </tr>
-            <tr class="border-t hover:bg-gray-50 transition">
-              <td class="py-4 px-6">Frosted Glass</td>
-              <td class="py-4 px-6">3' x 5'</td>
-              <td class="py-4 px-6 text-green-700 font-semibold">₹150</td>
-              <td class="py-4 px-6">Bathrooms, offices, partitions</td>
-            </tr>
-            <tr class="border-t hover:bg-gray-50 transition">
-              <td class="py-4 px-6">Insulated Glass</td>
-              <td class="py-4 px-6">5' x 7'</td>
-              <td class="py-4 px-6 text-green-700 font-semibold">₹200</td>
-              <td class="py-4 px-6">Energy-efficient windows</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <!-- Product Cards Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <!-- Benefits Section -->
-      <section aria-label="Glass Benefits" class="mt-16">
-        <h3 class="text-3xl font-semibold text-gray-800 mb-8">Why Choose Our Glass Products?</h3>
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <article class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-            <h4 class="text-xl font-bold text-red-700 mb-2">Safety & Durability</h4>
-            <p>Tempered and laminated glasses offer break-resistance and enhanced protection for secure environments.</p>
-          </article>
-          <article class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-            <h4 class="text-xl font-bold text-red-700 mb-2">Privacy & Style</h4>
-            <p>Frosted glass gives a sleek look while ensuring privacy—perfect for bathrooms, partitions, and offices.</p>
-          </article>
-          <article class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-            <h4 class="text-xl font-bold text-red-700 mb-2">Energy Efficiency</h4>
-            <p>Insulated glass minimizes heat transfer, keeping interiors cooler and reducing energy bills.</p>
-          </article>
+      <!-- Tempered Glass Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="tempered-glass.jpg" alt="A modern glass shower enclosure made of tempered glass" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <div class="flex items-center text-red-600 mb-2">
+            <i class="ph ph-shield-check text-xl mr-2"></i>
+            <span class="text-sm font-semibold uppercase tracking-wider">The Standard for Safety</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Tempered Glass</h3>
+          <p class="text-gray-600 mb-4 flex-1">Heat-treated for up to 4x the strength of normal glass. If broken, it shatters into small, dull cubes, reducing injury risk. Ideal for doors, shower enclosures, and tabletops.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">from ₹100 / sq.ft</div>
         </div>
-      </section>
-    </section>
+      </article>
+
+      <!-- Laminated Glass Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="laminated-glass.jpg" alt="A secure glass storefront made of laminated glass" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <div class="flex items-center text-red-600 mb-2">
+            <i class="ph ph-lock text-xl mr-2"></i>
+            <span class="text-sm font-semibold uppercase tracking-wider">Security & Soundproofing</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Laminated Glass</h3>
+          <p class="text-gray-600 mb-4 flex-1">Features a tough vinyl interlayer that holds the glass together when shattered. Excellent for security windows, skylights, and reducing noise transmission.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">from ₹120 / sq.ft</div>
+        </div>
+      </article>
+
+      <!-- Frosted Glass Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="frosted-glass.jpg" alt="An elegant frosted glass office partition" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <div class="flex items-center text-red-600 mb-2">
+            <i class="ph ph-eye-slash text-xl mr-2"></i>
+            <span class="text-sm font-semibold uppercase tracking-wider">Elegant Privacy</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Frosted Glass</h3>
+          <p class="text-gray-600 mb-4 flex-1">Sandblasted or acid-etched to create a translucent finish that obscures visibility while allowing light to pass through. Perfect for bathrooms, office partitions, and decorative use.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">from ₹150 / sq.ft</div>
+        </div>
+      </article>
+      
+      <!-- Insulated Glass Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="insulated-glass.jpg" alt="An energy-efficient window with insulated glass" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <div class="flex items-center text-red-600 mb-2">
+            <i class="ph ph-thermometer-hot text-xl mr-2"></i>
+            <span class="text-sm font-semibold uppercase tracking-wider">Energy Efficiency</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Insulated Glass</h3>
+          <p class="text-gray-600 mb-4 flex-1">Two or more panes of glass separated by a sealed air gap to reduce heat transfer. Keeps interiors cooler in summer and warmer in winter, lowering energy bills.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">from ₹200 / sq.ft</div>
+        </div>
+      </article>
+
+      <!-- Custom Solutions Card -->
+      <article class="bg-gray-800 text-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center justify-center text-center p-6 group">
+        <i class="ph ph-ruler text-5xl text-red-500 mb-4"></i>
+        <h3 class="text-2xl font-bold mb-2">Custom Cuts & Solutions</h3>
+        <p class="text-gray-300 mb-6 flex-1">Have a unique requirement? We provide custom-sized glass, specialized coatings, and expert consultation to bring your vision to life.</p>
+        <a href="index.html#contact" class="mt-auto bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition-colors">
+            Discuss Your Project
+        </a>
+      </article>
+
+    </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-white mt-16 py-6 text-center text-gray-500 text-sm border-t">
-    © 2025 <strong>ASWIN142003</strong>. All rights reserved.
+  <!-- START: Universal Footer -->
+  <footer class="bg-gray-900 text-white py-12 mt-20">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div><h3 class="text-xl font-bold mb-4">ASWIN142003</h3><p class="text-gray-400">Providing high-quality construction materials to build India's future.</p></div>
+        <div><h4 class="text-lg font-semibold mb-4">Quick Links</h4><ul class="space-y-2"><li><a href="index.html#about" class="text-gray-400 hover:text-white transition">Products</a></li><li><a href="index.html#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a></li><li><a href="index.html#contact" class="text-gray-400 hover:text-white transition">Contact Us</a></li></ul></div>
+        <div><h4 class="text-lg font-semibold mb-4">Our Products</h4><ul class="space-y-2"><li><a href="steel.html" class="text-gray-400 hover:text-white transition">Structural Steel</a></li><li><a href="Premium Cement.html" class="text-gray-400 hover:text-white transition">Premium Cement</a></li><li><a href="Concrete.html" class="text-gray-400 hover:text-white transition">Concrete</a></li><li><a href="Bricks-Concrete-Blocks.html" class="text-gray-400 hover:text-white transition">Bricks & Blocks</a></li></ul></div>
+        <div><h4 class="text-lg font-semibold mb-4">Newsletter</h4><p class="text-gray-400 mb-4">Get updates on new products and special offers.</p><form class="flex"><input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full"><button type="submit" class="bg-red-700 hover:bg-red-800 px-4 py-2 rounded-r-lg transition"><i class="ph ph-paper-plane-tilt"></i></button></form></div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center"><p class="text-gray-400 text-sm">© 2024 ASWIN142003. All rights reserved. Designed with precision.</p></div>
+    </div>
   </footer>
+  <!-- END: Universal Footer -->
+
+  <!-- Universal Mobile Menu Script -->
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuButton) { mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); }); }
+  </script>
 
 </body>
 </html>

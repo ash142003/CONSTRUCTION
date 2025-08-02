@@ -3,86 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bricks & Concrete Blocks</title>
+  <title>Bricks & Concrete Blocks | ASWIN142003</title>
+  <meta name="description" content="Explore our range of durable bricks and blocks, including red clay, fly ash, and concrete blocks, for all your construction needs.">
+  
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Icons and Favicon -->
+  <link href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
 
-  <!-- Navbar -->
-  <header class="sticky top-0 bg-white shadow z-50">
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="index.html">
-            <h1 class="text-2xl font-bold text-red-700 cursor-pointer">🛠️ASWIN142003</h1>
-          </a>
-      <ul class="flex space-x-6 text-gray-700 font-medium">
-        <li><a href="#about" class="hover:text-red-700 transition">About</a></li>
-        <li><a href="#contact" class="hover:text-red-700 transition">Contact</a></li>
+  <!-- START: Universal Responsive Header -->
+  <header class="sticky top-0 bg-white shadow-md z-50">
+    <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2">
+        <span class="text-red-600 text-2xl">🛠️</span>
+        <h1 class="text-2xl font-bold text-red-700 tracking-tight">ASWIN142003</h1>
+      </a>
+      <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+        <i class="ph ph-list text-3xl"></i>
+      </button>
+      <ul class="hidden md:flex space-x-8 text-gray-700 font-medium items-center">
+        <li><a href="index.html#about" class="hover:text-red-700 transition duration-300">Products</a></li>
+        <li><a href="index.html#testimonials" class="hover:text-red-700 transition duration-300">Testimonials</a></li>
+        <li><a href="index.html#contact" class="hover:text-red-700 transition duration-300">Contact</a></li>
+        <li><a href="ai.html" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm font-semibold">AI Estimator</a></li>
       </ul>
     </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 border-t border-gray-200">
+      <a href="index.html#about" class="block py-2 hover:text-red-700">Products</a>
+      <a href="index.html#testimonials" class="block py-2 hover:text-red-700">Testimonials</a>
+      <a href="index.html#contact" class="block py-2 hover:text-red-700">Contact</a>
+      <a href="ai.html" target="_blank" class="block py-2 font-semibold text-blue-600">AI Material Estimator</a>
+    </div>
   </header>
+  <!-- END: Universal Responsive Header -->
 
-  <!-- Section: Bricks & Blocks -->
-  <section class="container mx-auto px-6 py-20 text-center">
-    <h2 class="text-4xl font-bold text-red-700 mb-12">Bricks & Conrete Blocks</h2>
-
-    <!-- Product Table -->
-    <div class="overflow-x-auto bg-white rounded-lg shadow-md">
-      <table class="min-w-full text-center table-auto">
-        <thead class="bg-gray-50">
-          <tr>
-            <th class="py-4 px-6 text-lg font-semibold text-gray-700">Type</th>
-            <th class="py-4 px-6 text-lg font-semibold text-gray-700">Size</th>
-            <th class="py-4 px-6 text-lg font-semibold text-gray-700">Price per Unit</th>
-            <th class="py-4 px-6 text-lg font-semibold text-gray-700">Best For</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="border-t hover:bg-gray-50 transition">
-            <td class="py-4 px-6">Red Clay Brick</td>
-            <td class="py-4 px-6">9" x 4.5" x 3"</td>
-            <td class="py-4 px-6 text-green-700 font-semibold">₹8</td>
-            <td class="py-4 px-6">General construction and partition walls.</td>
-          </tr>
-          <tr class="border-t hover:bg-gray-50 transition">
-            <td class="py-4 px-6">Fly Ash Brick</td>
-            <td class="py-4 px-6">9" x 4" x 3"</td>
-            <td class="py-4 px-6 text-green-700 font-semibold">₹6</td>
-            <td class="py-4 px-6">Eco-friendly and lightweight wall structures.</td>
-          </tr>
-          <tr class="border-t hover:bg-gray-50 transition">
-            <td class="py-4 px-6">Concrete Block</td>
-            <td class="py-4 px-6">16" x 8" x 8"</td>
-            <td class="py-4 px-6 text-green-700 font-semibold">₹30</td>
-            <td class="py-4 px-6">Heavy-duty structural walls and load-bearing purposes.</td>
-          </tr>
-        </tbody>
-      </table>
+  <!-- Main Content -->
+  <main class="container mx-auto px-6 py-20">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-red-700 mb-4">Bricks & Concrete Blocks</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">The foundation of every great structure. We provide a range of high-quality, durable bricks and blocks to meet your specific construction needs.</p>
     </div>
 
-    <!-- Why Choose Us -->
-    <div class="mt-16">
-      <h3 class="text-3xl font-semibold text-gray-800 mb-10">Why Choose Our Blocks?</h3>
-      <div class="grid md:grid-cols-3 gap-8 text-left">
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h4 class="text-2xl text-red-700 font-semibold mb-2">Durability & Strength</h4>
-          <p class="text-gray-700">Built to industry standards, our bricks and blocks ensure long-lasting structural integrity with high load tolerance.</p>
+    <!-- Product Cards Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Red Clay Bricks Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="red-clay-bricks.jpg" alt="A neat stack of red clay bricks" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Red Clay Bricks</h3>
+          <p class="text-gray-600 mb-4 flex-1">The classic and most widely used brick, offering a warm aesthetic, excellent strength, and proven longevity for all types of wall construction.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">₹8 / brick</div>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h4 class="text-2xl text-red-700 font-semibold mb-2">Thermal Insulation</h4>
-          <p class="text-gray-700">Designed for energy efficiency, our materials help regulate temperature, reducing HVAC costs.</p>
+      </article>
+
+      <!-- Fly Ash Bricks Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="fly-ash-bricks.jpg" alt="A pallet of uniform, grey fly ash bricks" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Fly Ash Bricks</h3>
+          <p class="text-gray-600 mb-4 flex-1">An eco-friendly choice made from recycled materials. Lighter than clay bricks, with a smoother finish and superior thermal insulation properties.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">₹6 / brick</div>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h4 class="text-2xl text-red-700 font-semibold mb-2">Eco-Friendly Options</h4>
-          <p class="text-gray-700">Our fly ash bricks are made from recycled materials, supporting a sustainable building approach.</p>
+      </article>
+
+      <!-- Hollow Concrete Blocks Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="hollow-concrete-blocks.jpg" alt="A wall constructed with hollow concrete blocks" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Hollow Concrete Blocks</h3>
+          <p class="text-gray-600 mb-4 flex-1">Speeds up construction time due to their larger size. The hollow cores provide good sound and heat insulation, making them ideal for partition walls.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">₹25 / block</div>
         </div>
-      </div>
+      </article>
+
+      <!-- Solid Concrete Blocks Card -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+        <div class="overflow-hidden"><img src="solid-concrete-blocks.jpg" alt="A strong foundation built with solid concrete blocks" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Solid Concrete Blocks</h3>
+          <p class="text-gray-600 mb-4 flex-1">Engineered for maximum compressive strength. The perfect choice for heavy load-bearing walls, foundations, and high-stress structural applications.</p>
+          <div class="mt-auto text-2xl font-bold text-green-700">₹30 / block</div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Call to Action Section -->
+  <section class="bg-white py-20 mt-16">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Ready to Build a Strong Foundation?</h2>
+        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Whether you need a bulk order for a large project or expert advice on the best materials to use, our team is here to help.</p>
+        <a href="index.html#contact" class="bg-red-700 hover:bg-red-800 transition duration-300 px-8 py-4 text-white font-semibold rounded-full shadow-lg transform hover:scale-105">
+            Request a Bulk Quote
+        </a>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="text-center py-6 mt-12 text-gray-500 text-sm border-t">
-    © 2025 ASWIN142003. All rights reserved.
+  <!-- START: Universal Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div><h3 class="text-xl font-bold mb-4">ASWIN142003</h3><p class="text-gray-400">Providing high-quality construction materials to build India's future.</p></div>
+        <div><h4 class="text-lg font-semibold mb-4">Quick Links</h4><ul class="space-y-2"><li><a href="index.html#about" class="text-gray-400 hover:text-white transition">Products</a></li><li><a href="index.html#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a></li><li><a href="index.html#contact" class="text-gray-400 hover:text-white transition">Contact Us</a></li></ul></div>
+        <div><h4 class="text-lg font-semibold mb-4">Our Products</h4><ul class="space-y-2"><li><a href="steel.html" class="text-gray-400 hover:text-white transition">Structural Steel</a></li><li><a href="Premium Cement.html" class="text-gray-400 hover:text-white transition">Premium Cement</a></li><li><a href="Concrete.html" class="text-gray-400 hover:text-white transition">Concrete</a></li><li><a href="Bricks-Concrete-Blocks.html" class="text-gray-400 hover:text-white transition">Bricks & Blocks</a></li></ul></div>
+        <div><h4 class="text-lg font-semibold mb-4">Newsletter</h4><p class="text-gray-400 mb-4">Get updates on new products and special offers.</p><form class="flex"><input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full"><button type="submit" class="bg-red-700 hover:bg-red-800 px-4 py-2 rounded-r-lg transition"><i class="ph ph-paper-plane-tilt"></i></button></form></div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center"><p class="text-gray-400 text-sm">© 2024 ASWIN142003. All rights reserved. Designed with precision.</p></div>
+    </div>
   </footer>
+  <!-- END: Universal Footer -->
+
+  <!-- Universal Mobile Menu Script -->
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuButton) { mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); }); }
+  </script>
 
 </body>
 </html>
